@@ -1,0 +1,83 @@
+# Reading pref.tcl
+# do XTEA_proj_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii {C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:35:14 on Apr 04,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii" C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v 
+# -- Compiling module xtea_core
+# 
+# Top level modules:
+# 	xtea_core
+# End time: 12:35:14 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+pwd
+# C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/simulation/modelsim
+cd ..
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+pwd
+# C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/simulation
+cd ..
+ls
+# Deliverable_1              XTEA_proj_nativelink_simulation.rpt  
+# Project Assignment.docx    db                                   
+# README.md                  incremental_db                       
+# XTEA_proj.qpf              output_files                         
+# XTEA_proj.qsf              simulation                           
+# XTEA_proj_description.txt  student_xtea_ps2_ascii               
+cd stu
+# couldn't change working directory to "stu": no such file or directory
+cd student_xtea_ps2_ascii
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vlog xtea_core.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:36:18 on Apr 04,2026
+# vlog -reportprogress 300 xtea_core.v 
+# -- Compiling module xtea_core
+# 
+# Top level modules:
+# 	xtea_core
+# End time: 12:36:18 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog tb_xtea_core.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:36:23 on Apr 04,2026
+# vlog -reportprogress 300 tb_xtea_core.v 
+# -- Compiling module tb_xtea_core
+# 
+# Top level modules:
+# 	tb_xtea_core
+# End time: 12:36:23 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_xtea_core
+# vsim work.tb_xtea_core 
+# Start time: 12:36:29 on Apr 04,2026
+# Loading work.tb_xtea_core
+# Loading work.xtea_core
+add wave -r /*
+run -all
+# All XTEA tests passed.
+# ** Note: $finish    : tb_xtea_core.v(24)
+#    Time: 2850 ns  Iteration: 1  Instance: /tb_xtea_core
+# 1
+# Break in Module tb_xtea_core at tb_xtea_core.v line 24
+wave zoom range 2700ns 2850ns
+# {2700 ns} {2850 ns}
+# image file format "bmp" is unknown
+# image file format "bmp" is unknown
+# image file format "bmp" is unknown
+write wave -window .main_pane.wave.interior.cs.body.pw.wf xtea_wave.ps
+# printing wave to file xtea_wave.ps
+# End time: 12:45:46 on Apr 04,2026, Elapsed time: 0:09:17
+# Errors: 0, Warnings: 0

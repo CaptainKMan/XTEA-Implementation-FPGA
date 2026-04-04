@@ -1,0 +1,35 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/simulation/modelsim
+vxtea_core
+!s110 1775320514
+!i10b 1
+!s100 X<;a6?G7705BB4aAf09NM3
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+I?K9d6H0HCkacHCAKX5f`F1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1775320314
+8C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v
+FC:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v
+!i122 0
+L0 7 105
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1775320514.000000
+!s107 C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii|C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii
+tCvgOpt 0

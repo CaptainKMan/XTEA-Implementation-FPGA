@@ -1,0 +1,6 @@
+
+State Machine - |xtea_core|state
+Name state.S_IDLE state.S_DONE state.S_RUN 
+state.S_IDLE 0 0 0 
+state.S_RUN 1 0 1 
+state.S_DONE 1 1 0 
