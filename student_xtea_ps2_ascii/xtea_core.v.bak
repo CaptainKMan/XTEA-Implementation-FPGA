@@ -33,22 +33,19 @@ module xtea_core (
 
   // key select helpers
   wire [31:0] key_low  = (sum[1:0]==2'd0)?k0:(sum[1:0]==2'd1)?k1:(sum[1:0]==2'd2)?k2:k3;
-  
-  wire [31:0] sum_plus_delta = sum + DELTA;
-  wire [31:0] key_high = (sum_plus_delta[12:11]==2'b00)?k0:(sum_plus_delta[12:11]==2'b01)?k1:(sum_plus_delta[12:11]==2'b10)?k2:k3;
+  wire [31:0] key_high = ((sum[12:11])==2'b00)?k0:((sum[12:11])==2'b01)?k1:((sum[12:11])==2'b10)?k2:k3;
 
   // round functions for encrypt
   wire [31:0] f0_enc = (((v1 << 4) ^ (v1 >> 5)) + v1) ^ (sum + key_low);
   wire [31:0] f1_enc;
-  assign f1_enc = ((((v0+f0_enc)<<4)^((v0+f0_enc)>>5))+(v0+f0_enc)) ^ (sum_plus_delta + key_high);
+  assign f1_enc = ((((v0 + f0_enc) << 4) ^ ((v0 + f0_enc) >> 5)) + (v0 + f0_enc)) ^ ((sum + DELTA) + key_high);
 
   // For decrypt compute in reverse
-  wire [31:0] key_high_d = (sum[12:11]==2'b00)?k0:(sum[12:11]==2'b01)?k1:(sum[12:11]==2'b10)?k2:k3;
+  wire [31:0] key_high_d = ((sum[12:11])==2'b00)?k0:((sum[12:11])==2'b01)?k1:((sum[12:11])==2'b10)?k2:k3;
   wire [31:0] f1_dec = (((v0 << 4) ^ (v0 >> 5)) + v0) ^ (sum + key_high_d);
   wire [31:0] v1_prev = v1 - f1_dec;
-  wire [31:0] sum_minus_delta = sum - DELTA;
-  wire [31:0] key_low_d = ((sum_minus_delta[1:0])==2'd0)?k0:((sum_minus_delta[1:0])==2'd1)?k1:((sum_minus_delta[1:0])==2'd2)?k2:k3;
-  wire [31:0] f0_dec = ((((v1_prev)<<4)^((v1_prev)>>5))+(v1_prev)) ^ ((sum - DELTA) + key_low_d);
+  wire [31:0] key_low_d = (((sum - DELTA)[1:0])==2'd0)?k0:(((sum - DELTA)[1:0])==2'd1)?k1:(((sum - DELTA)[1:0])==2'd2)?k2:k3;
+  wire [31:0] f0_dec = ((((v1_prev) << 4) ^ ((v1_prev) >> 5)) + (v1_prev)) ^ ((sum - DELTA) + key_low_d);
 
   always @(posedge clk) begin
     if (rst) begin
