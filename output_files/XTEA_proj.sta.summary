@@ -2,40 +2,76 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -14.213
-TNS   : -1759.732
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -14.924
+TNS   : -4219.132
 
-Type  : Slow 1200mV 85C Model Hold 'clk'
+Type  : Slow 1200mV 85C Model Setup 'ps2_keyboard:kbd|ascii[0]'
+Slack : -1.773
+TNS   : -6.384
+
+Type  : Slow 1200mV 85C Model Hold 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.007
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
 Slack : 0.402
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -221.450
+TNS   : -794.560
 
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -12.866
-TNS   : -1588.479
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.354
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.369
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : -3.000
-TNS   : -221.450
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -13.473
+TNS   : -3811.734
 
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -6.617
-TNS   : -795.101
+Type  : Slow 1200mV 0C Model Setup 'ps2_keyboard:kbd|ascii[0]'
+Slack : -1.698
+TNS   : -6.328
 
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.182
+Type  : Slow 1200mV 0C Model Hold 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.045
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -183.733
+TNS   : -794.560
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -7.150
+TNS   : -1812.772
+
+Type  : Fast 1200mV 0C Model Setup 'ps2_keyboard:kbd|ascii[0]'
+Slack : -0.512
+TNS   : -1.732
+
+Type  : Fast 1200mV 0C Model Hold 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.025
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -657.079
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.212
+TNS   : 0.000
 
 ------------------------------------------------------------

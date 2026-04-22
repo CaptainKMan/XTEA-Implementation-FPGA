@@ -1,5 +1,23 @@
 
-State Machine - |xtea_core|state
+State Machine - |top_xtea_ps2_lcd|lcd_text:lcd|st
+Name st.S_PUT_L2 st.S_SET_L2 st.S_PUT_L1 st.S_SET_L1 st.S_IDLE st.S_INIT_EMS st.S_INIT_CLR_W st.S_INIT_CLR st.S_INIT_ON st.S_INIT_FS3 st.S_INIT_FS2_W st.S_INIT_FS2 st.S_INIT_FS1_W st.S_INIT_FS1 st.S_INIT_WAIT 
+st.S_INIT_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+st.S_INIT_FS1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+st.S_INIT_FS1_W 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+st.S_INIT_FS2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+st.S_INIT_FS2_W 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+st.S_INIT_FS3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+st.S_INIT_ON 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+st.S_INIT_CLR 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+st.S_INIT_CLR_W 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+st.S_INIT_EMS 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+st.S_IDLE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+st.S_SET_L1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+st.S_PUT_L1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_SET_L2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_PUT_L2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_xtea_ps2_lcd|xtea_core:core|state
 Name state.S_IDLE state.S_DONE state.S_RUN 
 state.S_IDLE 0 0 0 
 state.S_RUN 1 0 1 

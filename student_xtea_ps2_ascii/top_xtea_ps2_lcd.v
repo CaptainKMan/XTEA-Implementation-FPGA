@@ -77,7 +77,7 @@ module top_xtea_ps2_lcd (
         end
       endcase
     end else begin
-      do_enc<=1'b0; do_dec<=1'b0;
+      do_enc<=1'b0; do_dec<=1'b0; if (done) block<=result;
     end
   end
 
@@ -89,7 +89,6 @@ module top_xtea_ps2_lcd (
     else begin
       start<=1'b0;
       if (do_enc) begin enc<=1'b1; start<=1'b1; end else if (do_dec) begin enc<=1'b0; start<=1'b1; end
-      if (done) block<=result; // store result back
     end
   end
 

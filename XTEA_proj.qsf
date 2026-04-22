@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY xtea_core
+set_global_assignment -name TOP_LEVEL_ENTITY top_xtea_ps2_lcd
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:02:36  MARCH 16, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -57,25 +57,22 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_N2 -to CLOCK_50
-set_location_assignment PIN_C24 -to PS2_KBCLK
-set_location_assignment PIN_D26 -to PS2_KBDAT
-set_location_assignment PIN_L4 -to LCD_ON
-set_location_assignment PIN_K2 -to LCD_BLON
-set_location_assignment PIN_K3 -to LCD_EN
-set_location_assignment PIN_K1 -to LCD_RS
-set_location_assignment PIN_K4 -to LCD_RW
-set_location_assignment PIN_J1 -to LCD_DATA0
-set_location_assignment PIN_J2 -to LCD_DATA1
-set_location_assignment PIN_H1 -to LCD_DATA2
-set_location_assignment PIN_H2 -to LCD_DATA3
-set_location_assignment PIN_J4 -to LCD_DATA4
-set_location_assignment PIN_J3 -to LCD_DATA5
-set_location_assignment PIN_H4 -to LCD_DATA6
-set_location_assignment PIN_H3 -to LCD_DATA7
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_Y2 -to CLOCK_50
+set_location_assignment PIN_G6 -to PS2_KBCLK
+set_location_assignment PIN_H5 -to PS2_KBDAT
+set_location_assignment PIN_L5 -to LCD_ON
+set_location_assignment PIN_L6 -to LCD_BLON
+set_location_assignment PIN_L4 -to LCD_EN
+set_location_assignment PIN_M2 -to LCD_RS
+set_location_assignment PIN_M1 -to LCD_RW
+set_location_assignment PIN_L3 -to LCD_DATA0
+set_location_assignment PIN_L1 -to LCD_DATA1
+set_location_assignment PIN_L2 -to LCD_DATA2
+set_location_assignment PIN_K7 -to LCD_DATA3
+set_location_assignment PIN_K1 -to LCD_DATA4
+set_location_assignment PIN_K2 -to LCD_DATA5
+set_location_assignment PIN_M3 -to LCD_DATA6
+set_location_assignment PIN_M5 -to LCD_DATA7
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
@@ -83,4 +80,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_M23 -to RESET_N
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

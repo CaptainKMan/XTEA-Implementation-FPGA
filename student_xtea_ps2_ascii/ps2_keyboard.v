@@ -31,7 +31,7 @@ module ps2_keyboard (
 
   always @(posedge clk) begin
     if (rst) begin
-      in_frame   <= 1'b0; bitcnt<=0; got_code<=1'b0; code<=8'd0; break_next<=1'b0;
+      in_frame <= 1'b0; bitcnt<=0; got_code<=1'b0; code<=8'd0;
     end else begin
       got_code <= 1'b0;
       if (fall) begin
