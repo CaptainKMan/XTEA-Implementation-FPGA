@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "04/22/2026 21:33:42"
+// DATE "04/22/2026 21:57:17"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -2920,7 +2920,7 @@ hard_block auto_generated_inst(
 
 // Location: IOOBUF_X0_Y58_N16
 cycloneive_io_obuf \LCD_ON~output (
-	.i(vcc),
+	.i(gnd),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),

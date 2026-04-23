@@ -58,7 +58,7 @@ module lcd_text (
   always @(posedge clk) begin
     if (rst) begin
       st<=S_INIT_WAIT; cnt<=0; idx<=0;
-      LCD_ON<=1'b1; LCD_BLON<=1'b1; LCD_EN<=1'b0;
+      LCD_ON<=1'b0; LCD_BLON<=1'b1; LCD_EN<=1'b0;
       LCD_RS<=1'b0; LCD_RW<=1'b0; LCD_DATA<=8'h00;
     end else if (tick) begin
       LCD_EN <= 1'b0; // pulled low each tick; send_cmd/dat overrides below
