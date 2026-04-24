@@ -44,19 +44,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "RESET_N",
-					"strict" : false
-				},
-				{
 					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "PS2_KBCLK",
-					"strict" : false
-				},
-				{
-					"name" : "PS2_KBDAT",
+					"name" : "RESET_N",
 					"strict" : false
 				}
 			]

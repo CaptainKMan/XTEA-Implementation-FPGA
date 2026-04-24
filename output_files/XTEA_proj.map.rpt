@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XTEA_proj
-Wed Apr 22 21:56:55 2026
+Thu Apr 23 23:13:43 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,21 +13,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |top_xtea_ps2_lcd|lcd_text:lcd|st
-  9. State Machine - |top_xtea_ps2_lcd|xtea_core:core|state
- 10. User-Specified and Inferred Latches
+  8. State Machine - |top_xtea_ps2_lcd|lcd_text:lcd|phase
+  9. State Machine - |top_xtea_ps2_lcd|lcd_text:lcd|state
+ 10. State Machine - |top_xtea_ps2_lcd|xtea_core:core|state
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
- 15. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
- 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 19. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Port Connectivity Checks: "lcd_text:lcd"
+ 16. Port Connectivity Checks: "hex64_to_ascii16:fmt"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -54,15 +51,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 22 21:56:55 2026       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 23 23:13:43 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XTEA_proj                                   ;
 ; Top-level Entity Name              ; top_xtea_ps2_lcd                            ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,239                                       ;
-;     Total combinational functions  ; 2,225                                       ;
-;     Dedicated logic registers      ; 616                                         ;
-; Total registers                    ; 616                                         ;
+; Total logic elements               ; 109                                         ;
+;     Total combinational functions  ; 109                                         ;
+;     Dedicated logic registers      ; 46                                          ;
+; Total registers                    ; 46                                          ;
 ; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -165,53 +162,27 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processor 9            ;   0.0%      ;
-;     Processors 10-12       ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
-+-------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                            ; Library ;
-+-------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; student_xtea_ps2_ascii/xtea_core.v        ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v        ;         ;
-; student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ;         ;
-; student_xtea_ps2_ascii/ps2_keyboard.v     ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v     ;         ;
-; student_xtea_ps2_ascii/lcd_text.v         ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v         ;         ;
-; student_xtea_ps2_ascii/hex64_to_ascii16.v ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v ;         ;
-; student_xtea_ps2_ascii/hex_ascii.v        ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v        ;         ;
-; lpm_divide.tdf                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                   ;         ;
-; abs_divider.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                  ;         ;
-; sign_div_unsign.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                              ;         ;
-; aglobal201.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                   ;         ;
-; db/lpm_divide_ghm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_ghm.tdf                     ;         ;
-; db/sign_div_unsign_8kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_8kh.tdf                ;         ;
-; db/alt_u_div_44f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_44f.tdf                      ;         ;
-; db/add_sub_7pc.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_7pc.tdf                        ;         ;
-; db/add_sub_8pc.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_8pc.tdf                        ;         ;
-; db/lpm_divide_fhm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_fhm.tdf                     ;         ;
-; db/sign_div_unsign_7kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_7kh.tdf                ;         ;
-; db/alt_u_div_24f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_24f.tdf                      ;         ;
-; db/lpm_divide_hhm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_hhm.tdf                     ;         ;
-; db/sign_div_unsign_9kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_9kh.tdf                ;         ;
-; db/alt_u_div_64f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_64f.tdf                      ;         ;
-; db/lpm_divide_j9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_j9m.tdf                     ;         ;
-; db/lpm_divide_i9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_i9m.tdf                     ;         ;
-; db/lpm_divide_k9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_k9m.tdf                     ;         ;
-+-------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++-------------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
++-------------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; student_xtea_ps2_ascii/xtea_core.v        ; yes             ; User Verilog HDL File  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v        ;         ;
+; student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ; yes             ; User Verilog HDL File  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ;         ;
+; student_xtea_ps2_ascii/ps2_keyboard.v     ; yes             ; User Verilog HDL File  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v     ;         ;
+; student_xtea_ps2_ascii/lcd_text.v         ; yes             ; User Verilog HDL File  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v         ;         ;
+; student_xtea_ps2_ascii/hex64_to_ascii16.v ; yes             ; User Verilog HDL File  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v ;         ;
+; student_xtea_ps2_ascii/hex_ascii.v        ; yes             ; User Verilog HDL File  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v        ;         ;
++-------------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -219,20 +190,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 2,239          ;
+; Estimated Total logic elements              ; 109            ;
 ;                                             ;                ;
-; Total combinational functions               ; 2225           ;
+; Total combinational functions               ; 109            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 864            ;
-;     -- 3 input functions                    ; 718            ;
-;     -- <=2 input functions                  ; 643            ;
+;     -- 4 input functions                    ; 61             ;
+;     -- 3 input functions                    ; 16             ;
+;     -- <=2 input functions                  ; 32             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 1569           ;
-;     -- arithmetic mode                      ; 656            ;
+;     -- normal mode                          ; 90             ;
+;     -- arithmetic mode                      ; 19             ;
 ;                                             ;                ;
-; Total registers                             ; 616            ;
-;     -- Dedicated logic registers            ; 616            ;
+; Total registers                             ; 46             ;
+;     -- Dedicated logic registers            ; 46             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 17             ;
@@ -240,89 +211,51 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 616            ;
-; Total fan-out                               ; 9013           ;
-; Average fan-out                             ; 3.13           ;
+; Maximum fan-out                             ; 46             ;
+; Total fan-out                               ; 514            ;
+; Average fan-out                             ; 2.72           ;
 +---------------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top_xtea_ps2_lcd                         ; 2225 (482)          ; 616 (359)                 ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |top_xtea_ps2_lcd                                                                                                 ; top_xtea_ps2_lcd    ; work         ;
-;    |ascii_hex_nibble:ah|                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|ascii_hex_nibble:ah                                                                             ; ascii_hex_nibble    ; work         ;
-;    |hex64_to_ascii16:fmt|                 ; 144 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt                                                                            ; hex64_to_ascii16    ; work         ;
-;       |hex_nibble_to_ascii:nibs[0].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[0].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[10].conv| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[10].conv                                          ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[11].conv| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[11].conv                                          ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[12].conv| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[12].conv                                          ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[13].conv| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[13].conv                                          ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[14].conv| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[14].conv                                          ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[15].conv| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[15].conv                                          ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[1].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[1].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[2].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[2].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[3].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[3].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[4].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[4].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[5].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[5].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[6].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[6].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[7].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[7].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[8].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[8].conv                                           ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[9].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[9].conv                                           ; hex_nibble_to_ascii ; work         ;
-;    |lcd_text:lcd|                         ; 211 (211)           ; 51 (51)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lcd_text:lcd                                                                                    ; lcd_text            ; work         ;
-;    |lpm_divide:Div0|                      ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_hhm:auto_generated|     ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                   ; lpm_divide_hhm      ; work         ;
-;          |sign_div_unsign_9kh:divider|    ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
-;             |alt_u_div_64f:divider|       ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
-;    |lpm_divide:Div1|                      ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_fhm:auto_generated|     ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div1|lpm_divide_fhm:auto_generated                                                   ; lpm_divide_fhm      ; work         ;
-;          |sign_div_unsign_7kh:divider|    ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div1|lpm_divide_fhm:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;             |alt_u_div_24f:divider|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div1|lpm_divide_fhm:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_24f:divider ; alt_u_div_24f       ; work         ;
-;    |lpm_divide:Div2|                      ; 17 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_ghm:auto_generated|     ; 17 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div2|lpm_divide_ghm:auto_generated                                                   ; lpm_divide_ghm      ; work         ;
-;          |sign_div_unsign_8kh:divider|    ; 17 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div2|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
-;             |alt_u_div_44f:divider|       ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Div2|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider ; alt_u_div_44f       ; work         ;
-;    |lpm_divide:Mod0|                      ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_k9m:auto_generated|     ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod0|lpm_divide_k9m:auto_generated                                                   ; lpm_divide_k9m      ; work         ;
-;          |sign_div_unsign_9kh:divider|    ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
-;             |alt_u_div_64f:divider|       ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
-;    |lpm_divide:Mod1|                      ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_i9m:auto_generated|     ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod1|lpm_divide_i9m:auto_generated                                                   ; lpm_divide_i9m      ; work         ;
-;          |sign_div_unsign_7kh:divider|    ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod1|lpm_divide_i9m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;             |alt_u_div_24f:divider|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod1|lpm_divide_i9m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_24f:divider ; alt_u_div_24f       ; work         ;
-;    |lpm_divide:Mod2|                      ; 17 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_j9m:auto_generated|     ; 17 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod2|lpm_divide_j9m:auto_generated                                                   ; lpm_divide_j9m      ; work         ;
-;          |sign_div_unsign_8kh:divider|    ; 17 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod2|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
-;             |alt_u_div_44f:divider|       ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lpm_divide:Mod2|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider ; alt_u_div_44f       ; work         ;
-;    |ps2_keyboard:kbd|                     ; 92 (92)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|ps2_keyboard:kbd                                                                                ; ps2_keyboard        ; work         ;
-;    |xtea_core:core|                       ; 1178 (1178)         ; 170 (170)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|xtea_core:core                                                                                  ; xtea_core           ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
+; |top_xtea_ps2_lcd          ; 109 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |top_xtea_ps2_lcd              ; top_xtea_ps2_lcd ; work         ;
+;    |lcd_text:lcd|          ; 109 (109)           ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|lcd_text:lcd ; lcd_text         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_xtea_ps2_lcd|lcd_text:lcd|st                                                                                                                                                                                                         ;
-+-----------------+-------------+-------------+-------------+-------------+-----------+---------------+-----------------+---------------+--------------+---------------+-----------------+---------------+-----------------+---------------+----------------+
-; Name            ; st.S_PUT_L2 ; st.S_SET_L2 ; st.S_PUT_L1 ; st.S_SET_L1 ; st.S_IDLE ; st.S_INIT_EMS ; st.S_INIT_CLR_W ; st.S_INIT_CLR ; st.S_INIT_ON ; st.S_INIT_FS3 ; st.S_INIT_FS2_W ; st.S_INIT_FS2 ; st.S_INIT_FS1_W ; st.S_INIT_FS1 ; st.S_INIT_WAIT ;
-+-----------------+-------------+-------------+-------------+-------------+-----------+---------------+-----------------+---------------+--------------+---------------+-----------------+---------------+-----------------+---------------+----------------+
-; st.S_INIT_WAIT  ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 0              ;
-; st.S_INIT_FS1   ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 1             ; 1              ;
-; st.S_INIT_FS1_W ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 1               ; 0             ; 1              ;
-; st.S_INIT_FS2   ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 1             ; 0               ; 0             ; 1              ;
-; st.S_INIT_FS2_W ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 1               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_INIT_FS3   ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 1             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_INIT_ON    ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 1            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_INIT_CLR   ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 1             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_INIT_CLR_W ; 0           ; 0           ; 0           ; 0           ; 0         ; 0             ; 1               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_INIT_EMS   ; 0           ; 0           ; 0           ; 0           ; 0         ; 1             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_IDLE       ; 0           ; 0           ; 0           ; 0           ; 1         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_SET_L1     ; 0           ; 0           ; 0           ; 1           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_PUT_L1     ; 0           ; 0           ; 1           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_SET_L2     ; 0           ; 1           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-; st.S_PUT_L2     ; 1           ; 0           ; 0           ; 0           ; 0         ; 0             ; 0               ; 0             ; 0            ; 0             ; 0               ; 0             ; 0               ; 0             ; 1              ;
-+-----------------+-------------+-------------+-------------+-------------+-----------+---------------+-----------------+---------------+--------------+---------------+-----------------+---------------+-----------------+---------------+----------------+
++--------------------------------------------------------------------+
+; State Machine - |top_xtea_ps2_lcd|lcd_text:lcd|phase               ;
++-----------------+----------------+---------------+-----------------+
+; Name            ; phase.PH_SETUP ; phase.PH_ELOW ; phase.PH_EPULSE ;
++-----------------+----------------+---------------+-----------------+
+; phase.PH_SETUP  ; 0              ; 0             ; 0               ;
+; phase.PH_EPULSE ; 1              ; 0             ; 1               ;
+; phase.PH_ELOW   ; 1              ; 1             ; 0               ;
++-----------------+----------------+---------------+-----------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_xtea_ps2_lcd|lcd_text:lcd|state                                                                                                    ;
++---------------+---------------+--------------+---------------+---------------+-------------+--------------+--------------+---------------+--------------+
+; Name          ; state.S_ADDR2 ; state.S_WRL1 ; state.S_ADDR1 ; state.S_ENTRY ; state.S_CLR ; state.S_DISP ; state.S_FUNC ; state.S_PWRON ; state.S_WRL2 ;
++---------------+---------------+--------------+---------------+---------------+-------------+--------------+--------------+---------------+--------------+
+; state.S_PWRON ; 0             ; 0            ; 0             ; 0             ; 0           ; 0            ; 0            ; 0             ; 0            ;
+; state.S_FUNC  ; 0             ; 0            ; 0             ; 0             ; 0           ; 0            ; 1            ; 1             ; 0            ;
+; state.S_DISP  ; 0             ; 0            ; 0             ; 0             ; 0           ; 1            ; 0            ; 1             ; 0            ;
+; state.S_CLR   ; 0             ; 0            ; 0             ; 0             ; 1           ; 0            ; 0            ; 1             ; 0            ;
+; state.S_ENTRY ; 0             ; 0            ; 0             ; 1             ; 0           ; 0            ; 0            ; 1             ; 0            ;
+; state.S_ADDR1 ; 0             ; 0            ; 1             ; 0             ; 0           ; 0            ; 0            ; 1             ; 0            ;
+; state.S_WRL1  ; 0             ; 1            ; 0             ; 0             ; 0           ; 0            ; 0            ; 1             ; 0            ;
+; state.S_ADDR2 ; 1             ; 0            ; 0             ; 0             ; 0           ; 0            ; 0            ; 1             ; 0            ;
+; state.S_WRL2  ; 0             ; 0            ; 0             ; 0             ; 0           ; 0            ; 0            ; 1             ; 1            ;
++---------------+---------------+--------------+---------------+---------------+-------------+--------------+--------------+---------------+--------------+
 
 
 Encoding Type:  One-Hot
@@ -337,56 +270,72 @@ Encoding Type:  One-Hot
 +--------------+--------------+--------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                     ;
-+----------------------------------------------------+---------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------------+------------------------+
-; ascii_hex_nibble:ah|h[0]                           ; ascii_hex_nibble:ah|valid ; yes                    ;
-; ascii_hex_nibble:ah|h[1]                           ; ascii_hex_nibble:ah|valid ; yes                    ;
-; ascii_hex_nibble:ah|h[2]                           ; ascii_hex_nibble:ah|valid ; yes                    ;
-; ascii_hex_nibble:ah|h[3]                           ; ascii_hex_nibble:ah|valid ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                           ;                        ;
-+----------------------------------------------------+---------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; lcd_text:lcd|LCD_BLON                  ; Stuck at VCC due to stuck port data_in ;
+; lcd_text:lcd|LCD_ON                    ; Stuck at VCC due to stuck port data_in ;
+; ps2_keyboard:kbd|ascii[7]              ; Stuck at GND due to stuck port data_in ;
+; lcd_text:lcd|state~11                  ; Lost fanout                            ;
+; lcd_text:lcd|state~12                  ; Lost fanout                            ;
+; lcd_text:lcd|state~13                  ; Lost fanout                            ;
+; start                                  ; Lost fanout                            ;
+; xtea_core:core|round[0..5]             ; Lost fanout                            ;
+; do_dec                                 ; Lost fanout                            ;
+; do_enc                                 ; Lost fanout                            ;
+; key_count[0..5]                        ; Lost fanout                            ;
+; blk_hex_count[0..4]                    ; Lost fanout                            ;
+; blk_ascii_count[0..3]                  ; Lost fanout                            ;
+; ascii_mode                             ; Lost fanout                            ;
+; ps2_keyboard:kbd|ascii[0..6]           ; Lost fanout                            ;
+; ps2_keyboard:kbd|ascii_valid           ; Lost fanout                            ;
+; sel_key                                ; Lost fanout                            ;
+; ps2_keyboard:kbd|code[0..6]            ; Lost fanout                            ;
+; ps2_keyboard:kbd|got_code              ; Lost fanout                            ;
+; ps2_keyboard:kbd|code[7]               ; Lost fanout                            ;
+; ps2_keyboard:kbd|break_next            ; Lost fanout                            ;
+; ps2_keyboard:kbd|shifter[3]            ; Lost fanout                            ;
+; ps2_keyboard:kbd|ps2c_sync[1,2]        ; Lost fanout                            ;
+; ps2_keyboard:kbd|bitcnt[0..3]          ; Lost fanout                            ;
+; ps2_keyboard:kbd|in_frame              ; Lost fanout                            ;
+; ps2_keyboard:kbd|shifter[1,2,4..8]     ; Lost fanout                            ;
+; ps2_keyboard:kbd|ps2c_sync[0]          ; Lost fanout                            ;
+; ps2_keyboard:kbd|shifter[9,10]         ; Lost fanout                            ;
+; xtea_core:core|state.S_RUN             ; Lost fanout                            ;
+; xtea_core:core|state.S_DONE            ; Lost fanout                            ;
+; xtea_core:core|state.S_IDLE            ; Lost fanout                            ;
+; Total Number of Removed Registers = 71 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                       ;
-+-----------------------------------------------------------------+----------------------------------------+
-; Register name                                                   ; Reason for Removal                     ;
-+-----------------------------------------------------------------+----------------------------------------+
-; l1[0..4]                                                        ; Stuck at GND due to stuck port data_in ;
-; l1[5]                                                           ; Stuck at VCC due to stuck port data_in ;
-; l1[6..12]                                                       ; Stuck at GND due to stuck port data_in ;
-; l1[13]                                                          ; Stuck at VCC due to stuck port data_in ;
-; l1[14..20]                                                      ; Stuck at GND due to stuck port data_in ;
-; l1[21]                                                          ; Stuck at VCC due to stuck port data_in ;
-; l1[22..28]                                                      ; Stuck at GND due to stuck port data_in ;
-; l1[29]                                                          ; Stuck at VCC due to stuck port data_in ;
-; l1[30..36]                                                      ; Stuck at GND due to stuck port data_in ;
-; l1[37]                                                          ; Stuck at VCC due to stuck port data_in ;
-; l1[38,39,41,42,47..49,51,52,55,57..60,63,65,67,68,71,74,79..84] ; Stuck at GND due to stuck port data_in ;
-; l1[85]                                                          ; Stuck at VCC due to stuck port data_in ;
-; l1[86,87,91,95,103]                                             ; Stuck at GND due to stuck port data_in ;
-; l1[106]                                                         ; Stuck at VCC due to stuck port data_in ;
-; l1[111]                                                         ; Stuck at GND due to stuck port data_in ;
-; l1[116]                                                         ; Stuck at VCC due to stuck port data_in ;
-; l1[119,126,127]                                                 ; Stuck at GND due to stuck port data_in ;
-; lcd_text:lcd|LCD_BLON                                           ; Stuck at VCC due to stuck port data_in ;
-; lcd_text:lcd|LCD_ON                                             ; Stuck at GND due to stuck port data_in ;
-; ps2_keyboard:kbd|ascii[7]                                       ; Stuck at GND due to stuck port data_in ;
-; l1[40,43,44,46,50,54,56,62,64,66,70,73,76,88,94,98,108,110,118] ; Merged with l1[102]                    ;
-; l1[92]                                                          ; Merged with l1[89]                     ;
-; l1[45,53,61,69,93,101,104,105,107,109,117,124,125]              ; Merged with l1[100]                    ;
-; lcd_text:lcd|LCD_RW                                             ; Stuck at GND due to stuck port data_in ;
-; lcd_text:lcd|st~17                                              ; Lost fanout                            ;
-; lcd_text:lcd|st~18                                              ; Lost fanout                            ;
-; lcd_text:lcd|st~19                                              ; Lost fanout                            ;
-; lcd_text:lcd|st~20                                              ; Lost fanout                            ;
-; l1[123]                                                         ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 118                         ;                                        ;
-+-----------------------------------------------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++---------------------------+---------------------------+----------------------------------------------------------------------------------------+
+; Register name             ; Reason for Removal        ; Registers Removed due to This Register                                                 ;
++---------------------------+---------------------------+----------------------------------------------------------------------------------------+
+; ps2_keyboard:kbd|ascii[7] ; Stuck at GND              ; ascii_mode, ps2_keyboard:kbd|ascii[0], ps2_keyboard:kbd|ascii[1],                      ;
+;                           ; due to stuck port data_in ; ps2_keyboard:kbd|ascii[2], ps2_keyboard:kbd|ascii[3], ps2_keyboard:kbd|ascii[4],       ;
+;                           ;                           ; ps2_keyboard:kbd|ascii[5], ps2_keyboard:kbd|ascii[6], ps2_keyboard:kbd|ascii_valid,    ;
+;                           ;                           ; sel_key, ps2_keyboard:kbd|code[2], ps2_keyboard:kbd|code[1], ps2_keyboard:kbd|code[5], ;
+;                           ;                           ; ps2_keyboard:kbd|code[4], ps2_keyboard:kbd|code[3], ps2_keyboard:kbd|code[0],          ;
+;                           ;                           ; ps2_keyboard:kbd|code[6], ps2_keyboard:kbd|got_code, ps2_keyboard:kbd|code[7],         ;
+;                           ;                           ; ps2_keyboard:kbd|break_next, ps2_keyboard:kbd|shifter[3],                              ;
+;                           ;                           ; ps2_keyboard:kbd|ps2c_sync[1], ps2_keyboard:kbd|ps2c_sync[2],                          ;
+;                           ;                           ; ps2_keyboard:kbd|bitcnt[0], ps2_keyboard:kbd|bitcnt[1], ps2_keyboard:kbd|bitcnt[2],    ;
+;                           ;                           ; ps2_keyboard:kbd|bitcnt[3], ps2_keyboard:kbd|in_frame, ps2_keyboard:kbd|shifter[2],    ;
+;                           ;                           ; ps2_keyboard:kbd|shifter[6], ps2_keyboard:kbd|shifter[5],                              ;
+;                           ;                           ; ps2_keyboard:kbd|shifter[4], ps2_keyboard:kbd|shifter[1],                              ;
+;                           ;                           ; ps2_keyboard:kbd|shifter[7], ps2_keyboard:kbd|shifter[8],                              ;
+;                           ;                           ; ps2_keyboard:kbd|ps2c_sync[0], ps2_keyboard:kbd|shifter[9],                            ;
+;                           ;                           ; ps2_keyboard:kbd|shifter[10]                                                           ;
+; start                     ; Lost Fanouts              ; do_dec, do_enc, key_count[5], key_count[4], key_count[3], key_count[2], key_count[1],  ;
+;                           ;                           ; key_count[0]                                                                           ;
+; blk_hex_count[4]          ; Lost Fanouts              ; blk_hex_count[3], blk_hex_count[2], blk_hex_count[1], blk_hex_count[0]                 ;
+; blk_ascii_count[3]        ; Lost Fanouts              ; blk_ascii_count[2], blk_ascii_count[1], blk_ascii_count[0]                             ;
+; xtea_core:core|round[0]   ; Lost Fanouts              ; xtea_core:core|state.S_RUN                                                             ;
++---------------------------+---------------------------+----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -394,220 +343,177 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 616   ;
-; Number of registers using Synchronous Clear  ; 289   ;
-; Number of registers using Synchronous Load   ; 91    ;
+; Total registers                              ; 46    ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 424   ;
+; Number of registers using Clock Enable       ; 15    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|LCD_RS           ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|div[8]           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l1[72]                        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l1[90]                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_xtea_ps2_lcd|ps2_keyboard:kbd|code[1]      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[126]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[120]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[119]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[114]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[111]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[105]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[101]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[97]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[93]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[90]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[85]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[82]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[76]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[73]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[69]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[65]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[62]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[56]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[53]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[50]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[45]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[43]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[37]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[33]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[31]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[26]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[23]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[19]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[15]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[11]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[6]                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l2[3]                         ;
-; 3:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |top_xtea_ps2_lcd|xtea_core:core|block_out[47]  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|l1[120]                       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|ps2_keyboard:kbd|bitcnt[3]    ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |top_xtea_ps2_lcd|xtea_core:core|round[5]       ;
-; 5:1                ; 64 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; Yes        ; |top_xtea_ps2_lcd|xtea_core:core|v0[21]         ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|idx[2]           ;
-; 6:1                ; 15 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |top_xtea_ps2_lcd|xtea_core:core|sum[11]        ;
-; 6:1                ; 17 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |top_xtea_ps2_lcd|xtea_core:core|sum[19]        ;
-; 256:1              ; 7 bits    ; 1190 LEs      ; 196 LEs              ; 994 LEs                ; Yes        ; |top_xtea_ps2_lcd|ps2_keyboard:kbd|ascii[6]     ;
-; 15:1               ; 5 bits    ; 50 LEs        ; 10 LEs               ; 40 LEs                 ; Yes        ; |top_xtea_ps2_lcd|blk_hex_count[4]              ;
-; 15:1               ; 3 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; Yes        ; |top_xtea_ps2_lcd|blk_ascii_count[1]            ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 4 LEs                ; 36 LEs                 ; Yes        ; |top_xtea_ps2_lcd|key[1]                        ;
-; 15:1               ; 124 bits  ; 1240 LEs      ; 124 LEs              ; 1116 LEs               ; Yes        ; |top_xtea_ps2_lcd|key[69]                       ;
-; 15:1               ; 6 bits    ; 60 LEs        ; 12 LEs               ; 48 LEs                 ; Yes        ; |top_xtea_ps2_lcd|key_count[5]                  ;
-; 12:1               ; 9 bits    ; 72 LEs        ; 9 LEs                ; 63 LEs                 ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|cnt[0]           ;
-; 19:1               ; 4 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |top_xtea_ps2_lcd|block[3]                      ;
-; 19:1               ; 3 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |top_xtea_ps2_lcd|block[5]                      ;
-; 19:1               ; 56 bits   ; 672 LEs       ; 112 LEs              ; 560 LEs                ; Yes        ; |top_xtea_ps2_lcd|block[10]                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_xtea_ps2_lcd|xtea_core:core|key_high_d[10] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_xtea_ps2_lcd|xtea_core:core|key_low[14]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_xtea_ps2_lcd|xtea_core:core|key_low_d[21]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_xtea_ps2_lcd|xtea_core:core|key_high[31]   ;
-; 13:1               ; 5 bits    ; 40 LEs        ; 25 LEs               ; 15 LEs                 ; No         ; |top_xtea_ps2_lcd|lcd_text:lcd|st               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|cnt[18]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|LCD_RS        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_xtea_ps2_lcd|ps2_keyboard:kbd|code[0]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_xtea_ps2_lcd|ps2_keyboard:kbd|bitcnt[3] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|cnt[1]        ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|cnt[3]        ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |top_xtea_ps2_lcd|xtea_core:core|round[2]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|LCD_DATA[4]   ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |top_xtea_ps2_lcd|lcd_text:lcd|char_cnt[3]   ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 196 LEs              ; 994 LEs                ; Yes        ; |top_xtea_ps2_lcd|ps2_keyboard:kbd|ascii[1]  ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 12 LEs               ; 48 LEs                 ; Yes        ; |top_xtea_ps2_lcd|key_count[2]               ;
+; 15:1               ; 5 bits    ; 50 LEs        ; 10 LEs               ; 40 LEs                 ; Yes        ; |top_xtea_ps2_lcd|blk_hex_count[4]           ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; Yes        ; |top_xtea_ps2_lcd|blk_ascii_count[2]         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top_xtea_ps2_lcd|lcd_text:lcd|state         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 5              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_ghm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++---------------------------------------------------+
+; Port Connectivity Checks: "lcd_text:lcd"          ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; line1[107..106] ; Input ; Info     ; Stuck at VCC ;
+; line1[99..98]   ; Input ; Info     ; Stuck at VCC ;
+; line1[91..88]   ; Input ; Info     ; Stuck at VCC ;
+; line1[74..72]   ; Input ; Info     ; Stuck at VCC ;
+; line1[67..64]   ; Input ; Info     ; Stuck at VCC ;
+; line1[51..50]   ; Input ; Info     ; Stuck at VCC ;
+; line1[125..124] ; Input ; Info     ; Stuck at GND ;
+; line1[122..119] ; Input ; Info     ; Stuck at GND ;
+; line1[117..115] ; Input ; Info     ; Stuck at GND ;
+; line1[109..108] ; Input ; Info     ; Stuck at GND ;
+; line1[105..103] ; Input ; Info     ; Stuck at GND ;
+; line1[101..100] ; Input ; Info     ; Stuck at GND ;
+; line1[97..95]   ; Input ; Info     ; Stuck at GND ;
+; line1[93..92]   ; Input ; Info     ; Stuck at GND ;
+; line1[87..86]   ; Input ; Info     ; Stuck at GND ;
+; line1[84..79]   ; Input ; Info     ; Stuck at GND ;
+; line1[69..68]   ; Input ; Info     ; Stuck at GND ;
+; line1[59..58]   ; Input ; Info     ; Stuck at GND ;
+; line1[56..55]   ; Input ; Info     ; Stuck at GND ;
+; line1[53..52]   ; Input ; Info     ; Stuck at GND ;
+; line1[49..47]   ; Input ; Info     ; Stuck at GND ;
+; line1[45..43]   ; Input ; Info     ; Stuck at GND ;
+; line1[41..38]   ; Input ; Info     ; Stuck at GND ;
+; line1[36..30]   ; Input ; Info     ; Stuck at GND ;
+; line1[28..22]   ; Input ; Info     ; Stuck at GND ;
+; line1[20..14]   ; Input ; Info     ; Stuck at GND ;
+; line1[12..6]    ; Input ; Info     ; Stuck at GND ;
+; line1[4..0]     ; Input ; Info     ; Stuck at GND ;
+; line1[127]      ; Input ; Info     ; Stuck at GND ;
+; line1[126]      ; Input ; Info     ; Stuck at VCC ;
+; line1[123]      ; Input ; Info     ; Stuck at VCC ;
+; line1[118]      ; Input ; Info     ; Stuck at VCC ;
+; line1[114]      ; Input ; Info     ; Stuck at VCC ;
+; line1[113]      ; Input ; Info     ; Stuck at GND ;
+; line1[112]      ; Input ; Info     ; Stuck at VCC ;
+; line1[111]      ; Input ; Info     ; Stuck at GND ;
+; line1[110]      ; Input ; Info     ; Stuck at VCC ;
+; line1[102]      ; Input ; Info     ; Stuck at VCC ;
+; line1[94]       ; Input ; Info     ; Stuck at VCC ;
+; line1[85]       ; Input ; Info     ; Stuck at VCC ;
+; line1[78]       ; Input ; Info     ; Stuck at VCC ;
+; line1[77]       ; Input ; Info     ; Stuck at GND ;
+; line1[76]       ; Input ; Info     ; Stuck at VCC ;
+; line1[75]       ; Input ; Info     ; Stuck at GND ;
+; line1[71]       ; Input ; Info     ; Stuck at GND ;
+; line1[70]       ; Input ; Info     ; Stuck at VCC ;
+; line1[63]       ; Input ; Info     ; Stuck at GND ;
+; line1[62]       ; Input ; Info     ; Stuck at VCC ;
+; line1[61]       ; Input ; Info     ; Stuck at GND ;
+; line1[60]       ; Input ; Info     ; Stuck at VCC ;
+; line1[57]       ; Input ; Info     ; Stuck at VCC ;
+; line1[54]       ; Input ; Info     ; Stuck at VCC ;
+; line1[46]       ; Input ; Info     ; Stuck at VCC ;
+; line1[42]       ; Input ; Info     ; Stuck at VCC ;
+; line1[37]       ; Input ; Info     ; Stuck at VCC ;
+; line1[29]       ; Input ; Info     ; Stuck at VCC ;
+; line1[21]       ; Input ; Info     ; Stuck at VCC ;
+; line1[13]       ; Input ; Info     ; Stuck at VCC ;
+; line1[5]        ; Input ; Info     ; Stuck at VCC ;
+; line2[125..124] ; Input ; Info     ; Stuck at VCC ;
+; line2[117..116] ; Input ; Info     ; Stuck at VCC ;
+; line2[109..108] ; Input ; Info     ; Stuck at VCC ;
+; line2[105..104] ; Input ; Info     ; Stuck at VCC ;
+; line2[101..100] ; Input ; Info     ; Stuck at VCC ;
+; line2[93..92]   ; Input ; Info     ; Stuck at VCC ;
+; line2[85..84]   ; Input ; Info     ; Stuck at VCC ;
+; line2[82..81]   ; Input ; Info     ; Stuck at VCC ;
+; line2[77..76]   ; Input ; Info     ; Stuck at VCC ;
+; line2[74..72]   ; Input ; Info     ; Stuck at VCC ;
+; line2[69..67]   ; Input ; Info     ; Stuck at VCC ;
+; line2[61..59]   ; Input ; Info     ; Stuck at VCC ;
+; line2[53..52]   ; Input ; Info     ; Stuck at VCC ;
+; line2[25..24]   ; Input ; Info     ; Stuck at VCC ;
+; line2[2..1]     ; Input ; Info     ; Stuck at VCC ;
+; line2[127..126] ; Input ; Info     ; Stuck at GND ;
+; line2[123..121] ; Input ; Info     ; Stuck at GND ;
+; line2[119..118] ; Input ; Info     ; Stuck at GND ;
+; line2[115..114] ; Input ; Info     ; Stuck at GND ;
+; line2[112..110] ; Input ; Info     ; Stuck at GND ;
+; line2[107..106] ; Input ; Info     ; Stuck at GND ;
+; line2[103..102] ; Input ; Info     ; Stuck at GND ;
+; line2[97..94]   ; Input ; Info     ; Stuck at GND ;
+; line2[87..86]   ; Input ; Info     ; Stuck at GND ;
+; line2[80..78]   ; Input ; Info     ; Stuck at GND ;
+; line2[71..70]   ; Input ; Info     ; Stuck at GND ;
+; line2[66..62]   ; Input ; Info     ; Stuck at GND ;
+; line2[58..57]   ; Input ; Info     ; Stuck at GND ;
+; line2[55..54]   ; Input ; Info     ; Stuck at GND ;
+; line2[51..47]   ; Input ; Info     ; Stuck at GND ;
+; line2[45..41]   ; Input ; Info     ; Stuck at GND ;
+; line2[37..34]   ; Input ; Info     ; Stuck at GND ;
+; line2[32..31]   ; Input ; Info     ; Stuck at GND ;
+; line2[29..26]   ; Input ; Info     ; Stuck at GND ;
+; line2[21..19]   ; Input ; Info     ; Stuck at GND ;
+; line2[17..15]   ; Input ; Info     ; Stuck at GND ;
+; line2[13..11]   ; Input ; Info     ; Stuck at GND ;
+; line2[5..3]     ; Input ; Info     ; Stuck at GND ;
+; line2[120]      ; Input ; Info     ; Stuck at VCC ;
+; line2[113]      ; Input ; Info     ; Stuck at VCC ;
+; line2[99]       ; Input ; Info     ; Stuck at GND ;
+; line2[98]       ; Input ; Info     ; Stuck at VCC ;
+; line2[91]       ; Input ; Info     ; Stuck at GND ;
+; line2[90]       ; Input ; Info     ; Stuck at VCC ;
+; line2[89]       ; Input ; Info     ; Stuck at GND ;
+; line2[88]       ; Input ; Info     ; Stuck at VCC ;
+; line2[83]       ; Input ; Info     ; Stuck at GND ;
+; line2[75]       ; Input ; Info     ; Stuck at GND ;
+; line2[56]       ; Input ; Info     ; Stuck at VCC ;
+; line2[46]       ; Input ; Info     ; Stuck at VCC ;
+; line2[40]       ; Input ; Info     ; Stuck at VCC ;
+; line2[39]       ; Input ; Info     ; Stuck at GND ;
+; line2[38]       ; Input ; Info     ; Stuck at VCC ;
+; line2[33]       ; Input ; Info     ; Stuck at VCC ;
+; line2[30]       ; Input ; Info     ; Stuck at VCC ;
+; line2[23]       ; Input ; Info     ; Stuck at GND ;
+; line2[22]       ; Input ; Info     ; Stuck at VCC ;
+; line2[18]       ; Input ; Info     ; Stuck at VCC ;
+; line2[14]       ; Input ; Info     ; Stuck at VCC ;
+; line2[10]       ; Input ; Info     ; Stuck at VCC ;
+; line2[9]        ; Input ; Info     ; Stuck at GND ;
+; line2[8]        ; Input ; Info     ; Stuck at VCC ;
+; line2[7]        ; Input ; Info     ; Stuck at GND ;
+; line2[6]        ; Input ; Info     ; Stuck at VCC ;
+; line2[0]        ; Input ; Info     ; Stuck at GND ;
++-----------------+-------+----------+--------------+
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_fhm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 6              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_hhm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 5              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_j9m ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_i9m ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 6              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_k9m ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex64_to_ascii16:fmt"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -616,28 +522,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 616                         ;
-;     ENA               ; 232                         ;
-;     ENA SCLR          ; 105                         ;
-;     ENA SCLR SLD      ; 80                          ;
-;     ENA SLD           ; 7                           ;
-;     SCLR              ; 102                         ;
-;     SCLR SLD          ; 2                           ;
-;     SLD               ; 2                           ;
-;     plain             ; 86                          ;
-; cycloneiii_lcell_comb ; 2226                        ;
-;     arith             ; 656                         ;
-;         2 data inputs ; 143                         ;
-;         3 data inputs ; 513                         ;
-;     normal            ; 1570                        ;
-;         0 data inputs ; 14                          ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 478                         ;
-;         3 data inputs ; 205                         ;
-;         4 data inputs ; 864                         ;
+; cycloneiii_ff         ; 46                          ;
+;     ENA               ; 6                           ;
+;     ENA SCLR          ; 9                           ;
+;     SCLR              ; 9                           ;
+;     SLD               ; 7                           ;
+;     plain             ; 15                          ;
+; cycloneiii_lcell_comb ; 111                         ;
+;     arith             ; 19                          ;
+;         2 data inputs ; 19                          ;
+;     normal            ; 92                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 61                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.70                       ;
-; Average LUT depth     ; 8.07                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -646,7 +548,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -656,7 +558,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 22 21:56:46 2026
+    Info: Processing started: Thu Apr 23 23:13:37 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XTEA_proj -c XTEA_proj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -669,13 +571,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file student
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/ps2_keyboard.v
     Info (12023): Found entity 1: ps2_keyboard File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/lcd_text.v
-    Info (12023): Found entity 1: lcd_text File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 6
+    Info (12023): Found entity 1: lcd_text File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/hex64_to_ascii16.v
     Info (12023): Found entity 1: hex64_to_ascii16 File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file student_xtea_ps2_ascii/hex_ascii.v
     Info (12023): Found entity 1: hex_nibble_to_ascii File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 2
     Info (12023): Found entity 2: ascii_hex_nibble File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 6
 Info (12127): Elaborating entity "top_xtea_ps2_lcd" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top_xtea_ps2_lcd.v(96): object "l1" assigned a value but never read File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 96
+Warning (10036): Verilog HDL or VHDL warning at top_xtea_ps2_lcd.v(96): object "l2" assigned a value but never read File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 96
 Warning (10230): Verilog HDL assignment warning at top_xtea_ps2_lcd.v(107): truncated value with size 160 to match size of target (128) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 107
 Warning (10230): Verilog HDL assignment warning at top_xtea_ps2_lcd.v(110): truncated value with size 176 to match size of target (128) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 110
 Warning (10230): Verilog HDL assignment warning at top_xtea_ps2_lcd.v(112): truncated value with size 160 to match size of target (128) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 112
@@ -693,101 +597,28 @@ Info (12128): Elaborating entity "xtea_core" for hierarchy "xtea_core:core" File
 Info (12128): Elaborating entity "hex64_to_ascii16" for hierarchy "hex64_to_ascii16:fmt" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 97
 Info (12128): Elaborating entity "hex_nibble_to_ascii" for hierarchy "hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[0].conv" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v Line: 6
 Info (12128): Elaborating entity "lcd_text" for hierarchy "lcd_text:lcd" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 119
-Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 112
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 110
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 107
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 112
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 110
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 107
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 112
-Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 112
-    Info (12134): Parameter "LPM_WIDTHN" = "5"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ghm.tdf
-    Info (12023): Found entity 1: lpm_divide_ghm File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_ghm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_8kh File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_8kh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_44f.tdf
-    Info (12023): Found entity 1: alt_u_div_44f File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_44f.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_7pc.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 110
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 110
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fhm.tdf
-    Info (12023): Found entity 1: lpm_divide_fhm File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_fhm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_7kh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_24f.tdf
-    Info (12023): Found entity 1: alt_u_div_24f File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_24f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 107
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 107
-    Info (12134): Parameter "LPM_WIDTHN" = "6"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
-    Info (12023): Found entity 1: lpm_divide_hhm File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_hhm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_9kh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
-    Info (12023): Found entity 1: alt_u_div_64f File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_64f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 112
-Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 112
-    Info (12134): Parameter "LPM_WIDTHN" = "5"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j9m.tdf
-    Info (12023): Found entity 1: lpm_divide_j9m File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_j9m.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 110
-Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 110
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i9m.tdf
-    Info (12023): Found entity 1: lpm_divide_i9m File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_i9m.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 107
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 107
-    Info (12134): Parameter "LPM_WIDTHN" = "6"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k9m.tdf
-    Info (12023): Found entity 1: lpm_divide_k9m File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_k9m.tdf Line: 25
-Warning (13012): Latch ascii_hex_nibble:ah|h[0] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[0] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 52
-Warning (13012): Latch ascii_hex_nibble:ah|h[1] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[1] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 52
-Warning (13012): Latch ascii_hex_nibble:ah|h[2] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[2] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 52
-Warning (13012): Latch ascii_hex_nibble:ah|h[3] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[3] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 52
+Info (10264): Verilog HDL Case Statement information at lcd_text.v(118): all case item expressions in this case statement are onehot File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 118
+Info (10264): Verilog HDL Case Statement information at lcd_text.v(144): all case item expressions in this case statement are onehot File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 144
+Info (10264): Verilog HDL Case Statement information at lcd_text.v(161): all case item expressions in this case statement are onehot File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 161
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LCD_ON" is stuck at GND File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 9
+    Warning (13410): Pin "LCD_ON" is stuck at VCC File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 9
     Warning (13410): Pin "LCD_BLON" is stuck at VCC File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 10
     Warning (13410): Pin "LCD_RW" is stuck at GND File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 68 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2259 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "PS2_KBCLK" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 7
+    Warning (15610): No output dependent on input pin "PS2_KBDAT" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 8
+Info (21057): Implemented 126 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 2242 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4883 megabytes
-    Info: Processing ended: Wed Apr 22 21:56:55 2026
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (21061): Implemented 109 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Thu Apr 23 23:13:43 2026
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:13
 
 

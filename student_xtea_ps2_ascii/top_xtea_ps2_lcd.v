@@ -115,6 +115,6 @@ module top_xtea_ps2_lcd (
     end
   end
 
-  lcd_text lcd(.clk(CLOCK_50), .rst(rst), .line1(l1), .line2(l2),
+  lcd_text lcd(.clk(CLOCK_50), .rst(rst), .line1("HELLO WORLD     "), .line2("1234567890ABCDEF"),
     .LCD_ON(LCD_ON), .LCD_BLON(LCD_BLON), .LCD_EN(LCD_EN), .LCD_RS(LCD_RS), .LCD_RW(LCD_RW), .LCD_DATA(LCD_DATA));
 endmodule
