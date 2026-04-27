@@ -7,13 +7,15 @@ module top_xtea_ps2_lcd (
   input  wire        PS2_KBCLK,
   input  wire        PS2_KBDAT,
   output wire        LCD_ON,
-  output wire        LCD_BLON,
   output wire        LCD_EN,
   output wire        LCD_RS,
   output wire        LCD_RW,
   output wire [7:0]  LCD_DATA
 );
-  wire rst = ~RESET_N;
+  reg [19:0] por_cnt = 20'd0;
+  wire rst = ~por_cnt[19];
+  always @(posedge CLOCK_50)
+    if (!por_cnt[19]) por_cnt <= por_cnt + 1'b1;
 
   // Keyboard
   wire k_valid; wire [7:0] k_ascii;
@@ -92,7 +94,8 @@ module top_xtea_ps2_lcd (
     end
   end
 
-  // LCD formatting
+  // LCD formatting — every string literal concatenation must total exactly 16 chars (128 bits).
+  // Verilog silently truncates from the LEFT if the concat is too wide, cutting the prefix off.
   reg [127:0] l1, l2;
   wire [127:0] hex_line; hex64_to_ascii16 fmt(.x(block), .s(hex_line));
 
@@ -100,21 +103,24 @@ module top_xtea_ps2_lcd (
 
   always @(posedge CLOCK_50) begin
     if (rst) begin
-      l1 <= "XTEA READY     ";
-      l2 <= "0000000000000000";
+      l1 <= "XTEA READY      "; // 16 chars exactly
+      l2 <= "0000000000000000"; // 16 chars exactly
     end else begin
       if (sel_key) begin
-        l1 <= {"KEY ", d2a(key_count/10), d2a(key_count%10), "/32", (ascii_mode?" A":" H"), "         "};
+        // "KEY " (4) + digit (1) + digit (1) + "/32" (3) + " A"/" H" (2) + "     " (5) = 16
+        l1 <= {"KEY ", d2a(key_count/10), d2a(key_count%10), "/32", (ascii_mode?" A":" H"), "     "};
       end else begin
         if (ascii_mode)
-          l1 <= {"ASCII ", d2a(blk_ascii_count/10), d2a(blk_ascii_count%10), "/8 ", "           "};
+          // "ASCII " (6) + digit (1) + digit (1) + "/8 " (3) + "     " (5) = 16
+          l1 <= {"ASCII ", d2a(blk_ascii_count/10), d2a(blk_ascii_count%10), "/8 ", "     "};
         else
-          l1 <= {"HEX ", d2a(blk_hex_count/10), d2a(blk_hex_count%10), "/16", "           "};
+          // "HEX " (4) + digit (1) + digit (1) + "/16" (3) + "       " (7) = 16
+          l1 <= {"HEX ", d2a(blk_hex_count/10), d2a(blk_hex_count%10), "/16", "       "};
       end
       l2 <= hex_line; // show block in hex on second line
     end
   end
 
-  lcd_text lcd(.clk(CLOCK_50), .rst(rst), .line1("HELLO WORLD     "), .line2("1234567890ABCDEF"),
-    .LCD_ON(LCD_ON), .LCD_BLON(LCD_BLON), .LCD_EN(LCD_EN), .LCD_RS(LCD_RS), .LCD_RW(LCD_RW), .LCD_DATA(LCD_DATA));
+  lcd_text lcd(.clk(CLOCK_50), .rst(rst), .line1(l1), .line2(l2),
+    .LCD_ON(LCD_ON), .LCD_EN(LCD_EN), .LCD_RS(LCD_RS), .LCD_RW(LCD_RW), .LCD_DATA(LCD_DATA));
 endmodule

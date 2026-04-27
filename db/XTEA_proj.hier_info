@@ -1,21 +1,20 @@
 |top_xtea_ps2_lcd
 CLOCK_50 => CLOCK_50.IN3
-RESET_N => rst.IN3
+RESET_N => ~NO_FANOUT~
 PS2_KBCLK => PS2_KBCLK.IN1
 PS2_KBDAT => PS2_KBDAT.IN1
-LCD_ON <= lcd_text:lcd.LCD_ON
-LCD_BLON <= lcd_text:lcd.LCD_BLON
-LCD_EN <= lcd_text:lcd.LCD_EN
-LCD_RS <= lcd_text:lcd.LCD_RS
-LCD_RW <= lcd_text:lcd.LCD_RW
-LCD_DATA[0] <= lcd_text:lcd.LCD_DATA
-LCD_DATA[1] <= lcd_text:lcd.LCD_DATA
-LCD_DATA[2] <= lcd_text:lcd.LCD_DATA
-LCD_DATA[3] <= lcd_text:lcd.LCD_DATA
-LCD_DATA[4] <= lcd_text:lcd.LCD_DATA
-LCD_DATA[5] <= lcd_text:lcd.LCD_DATA
-LCD_DATA[6] <= lcd_text:lcd.LCD_DATA
-LCD_DATA[7] <= lcd_text:lcd.LCD_DATA
+LCD_ON << lcd_text:lcd.LCD_ON
+LCD_EN << lcd_text:lcd.LCD_EN
+LCD_RS << lcd_text:lcd.LCD_RS
+LCD_RW << lcd_text:lcd.LCD_RW
+LCD_DATA[0] << lcd_text:lcd.LCD_DATA
+LCD_DATA[1] << lcd_text:lcd.LCD_DATA
+LCD_DATA[2] << lcd_text:lcd.LCD_DATA
+LCD_DATA[3] << lcd_text:lcd.LCD_DATA
+LCD_DATA[4] << lcd_text:lcd.LCD_DATA
+LCD_DATA[5] << lcd_text:lcd.LCD_DATA
+LCD_DATA[6] << lcd_text:lcd.LCD_DATA
+LCD_DATA[7] << lcd_text:lcd.LCD_DATA
 
 
 |top_xtea_ps2_lcd|ps2_keyboard:kbd
@@ -2017,7 +2016,6 @@ clk => LCD_DATA[6]~reg0.CLK
 clk => LCD_DATA[7]~reg0.CLK
 clk => LCD_RS~reg0.CLK
 clk => LCD_EN~reg0.CLK
-clk => LCD_BLON~reg0.CLK
 clk => LCD_ON~reg0.CLK
 clk => char_cnt[0].CLK
 clk => char_cnt[1].CLK
@@ -2091,7 +2089,6 @@ rst => LCD_DATA.OUTPUTSELECT
 rst => LCD_DATA.OUTPUTSELECT
 rst => LCD_DATA.OUTPUTSELECT
 rst => LCD_DATA.OUTPUTSELECT
-rst => LCD_BLON~reg0.ENA
 rst => LCD_ON~reg0.ENA
 line1[0] => Mux0.IN7
 line1[1] => Mux1.IN3
@@ -2350,7 +2347,6 @@ line2[125] => Mux13.IN127
 line2[126] => Mux14.IN127
 line2[127] => Mux15.IN127
 LCD_ON <= LCD_ON~reg0.DB_MAX_OUTPUT_PORT_TYPE
-LCD_BLON <= LCD_BLON~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LCD_EN <= LCD_EN~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LCD_RS <= LCD_RS~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LCD_RW <= <GND>

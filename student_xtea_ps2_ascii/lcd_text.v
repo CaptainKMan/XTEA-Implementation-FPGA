@@ -3,21 +3,28 @@
 // 8-bit parallel interface; LCD_RW is tied low (write-only).
 // Sends the HD44780 initialization sequence on power-up, then
 // continuously refreshes both lines from the line1 / line2 inputs.
+//
+// Polarity per DE2-115 User Manual Table 4-6 and Figure 4-12:
+//   All signals connect directly to the HD44780 with no inverting buffers.
+//   LCD_RW: 0 = Write, 1 = Read  (drive 0 always)
+//   LCD_RS: 0 = Command, 1 = Data (standard HD44780)
+//   LCD_EN: idle low, pulse high  (standard HD44780)
+//   LCD_ON: 1 = power on
+//   LCD_BLON: NOT USED - DE2-115 boards have no backlight (per manual note 1)
 
 module lcd_text (
   input  wire         clk,       // 50 MHz system clock
   input  wire         rst,       // synchronous active-high reset
   input  wire [127:0] line1,     // 16 ASCII characters, char 0 at bits [127:120]
   input  wire [127:0] line2,     // 16 ASCII characters, char 0 at bits [127:120]
-  output reg          LCD_ON,    // LCD power enable  (active HIGH on this board)
-  output reg          LCD_BLON,  // backlight enable  (active high)
-  output reg          LCD_EN,    // enable strobe
+  output reg          LCD_ON,    // LCD power enable, 1 = on
+  output reg          LCD_EN,    // enable strobe, idle low, pulse high
   output reg          LCD_RS,    // 0 = command, 1 = data
-  output wire         LCD_RW,    // 0 = write (always)
+  output wire         LCD_RW,    // 0 = write (always); 1 = read per HD44780
   output reg  [7:0]   LCD_DATA   // 8-bit parallel data bus
 );
 
-  // LCD_RW is permanently low: we only ever write to the display
+  // LCD_RW is permanently 0: we only ever write to the display
   assign LCD_RW = 1'b0;
 
   // ------------------------------------------------------------------
@@ -45,12 +52,11 @@ module lcd_text (
     S_ADDR2 = 4'd7,   // set DDRAM address 0x40 (start of line 2)
     S_WRL2  = 4'd8;   // write 16 characters to line 2, then loop to S_ADDR1
 
-  // E-strobe phases used by every command/data state.
-  // LCD_EN is active LOW on the DE2-115: idle = 1, pulse = 0.
+  // E-strobe sub-states: standard HD44780 polarity (idle low, pulse high)
   localparam [1:0]
-    PH_SETUP  = 2'd0,  // hold RS and DATA stable, count setup time  (EN idle = 1)
-    PH_EPULSE = 2'd1,  // drive EN = 0 (active-low pulse to the display)
-    PH_ELOW   = 2'd2;  // drive EN = 1 (return idle), count post-command delay
+    PH_SETUP  = 2'd0,  // hold RS and DATA stable, count setup time (EN = 0)
+    PH_EPULSE = 2'd1,  // drive EN = 1 for pulse width
+    PH_ELOW   = 2'd2;  // drive EN = 0, count post-command delay
 
   // ------------------------------------------------------------------
   // Registers
@@ -84,10 +90,9 @@ module lcd_text (
       phase    <= PH_SETUP;
       cnt      <= T_PWRON;
       char_cnt <= 4'd0;
-      LCD_ON   <= 1'b1;    // active LOW on DE2-115: drive 0 to enable the display
-      LCD_BLON <= 1'b1;    // backlight is active high; assert immediately
-      LCD_EN   <= 1'b1;    // EN idle state is HIGH (active-low strobe)
-      LCD_RS   <= 1'b0;
+      LCD_ON   <= 1'b1;    // power on immediately; row-of-blocks confirmed 1 = on
+      LCD_EN   <= 1'b0;    // EN idles low (standard HD44780)
+      LCD_RS   <= 1'b0;    // command mode during init
       LCD_DATA <= 8'h00;
     end else begin
       case (state)
@@ -96,7 +101,7 @@ module lcd_text (
         // Power-on delay: no bus activity, just let the HD44780 boot
         // ----------------------------------------------------------------
         S_PWRON: begin
-          LCD_EN <= 1'b1;  // EN idles high (active-low); no strobe during power-on wait
+          LCD_EN <= 1'b0;
           if (cnt == 20'd0) begin
             state <= S_FUNC;
             phase <= PH_SETUP;
@@ -112,9 +117,9 @@ module lcd_text (
         default: begin
           case (phase)
 
-            // -- Setup phase: drive RS and DATA, keep EN = 1 (idle), then wait T_SETUP --
+            // -- Setup phase: drive RS and DATA, hold EN = 0, wait T_SETUP --
             PH_SETUP: begin
-              LCD_EN <= 1'b1;  // EN remains idle (high) while data settles
+              LCD_EN <= 1'b0;
               case (state)
                 S_FUNC:  begin LCD_RS <= 1'b0; LCD_DATA <= 8'h38; end // Function Set
                 S_DISP:  begin LCD_RS <= 1'b0; LCD_DATA <= 8'h0C; end // Display ON
@@ -134,27 +139,26 @@ module lcd_text (
               end
             end
 
-            // -- Pulse phase: drive EN = 0 (active-low strobe to HD44780) ----
+            // -- Pulse phase: drive EN = 1 for T_EPULSE -------------------
             PH_EPULSE: begin
-              LCD_EN <= 1'b0;  // active-low pulse; HD44780 latches on rising edge (our EN going back to 1)
+              LCD_EN <= 1'b1;
               if (cnt == 20'd0) begin
-                LCD_EN <= 1'b1; // end pulse: EN returns idle-high
+                LCD_EN <= 1'b0; // drop EN at end of pulse
                 phase  <= PH_ELOW;
-                // Each command has its own required post-delay
                 case (state)
-                  S_FUNC:          cnt <= T_INIT1; // 4.1 ms after Function Set
-                  S_CLR:           cnt <= T_CLEAR; // 2 ms after Clear Display
-                  S_WRL1, S_WRL2:  cnt <= T_WRITE; // 50 us after each char
-                  default:         cnt <= T_SHORT;  // 100 us otherwise
+                  S_FUNC:         cnt <= T_INIT1; // 4.1 ms after Function Set
+                  S_CLR:          cnt <= T_CLEAR; // 2 ms after Clear Display
+                  S_WRL1, S_WRL2: cnt <= T_WRITE; // 50 us after each char
+                  default:        cnt <= T_SHORT;  // 100 us otherwise
                 endcase
               end else begin
                 cnt <= cnt - 1'b1;
               end
             end
 
-            // -- Post-delay phase: EN stays idle (1), wait, then advance state --
+            // -- Post-delay phase: EN = 0, wait, then advance state --------
             PH_ELOW: begin
-              LCD_EN <= 1'b1;  // EN idle during post-command delay
+              LCD_EN <= 1'b0;
               if (cnt == 20'd0) begin
                 phase <= PH_SETUP;
                 cnt   <= T_SETUP;

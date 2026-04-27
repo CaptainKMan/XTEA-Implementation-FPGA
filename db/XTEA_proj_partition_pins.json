@@ -48,7 +48,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "RESET_N",
+					"name" : "PS2_KBCLK",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_KBDAT",
 					"strict" : false
 				}
 			]

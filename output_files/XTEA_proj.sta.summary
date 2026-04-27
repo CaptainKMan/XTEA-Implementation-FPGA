@@ -3,39 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -2.898
-TNS   : -109.574
+Slack : -14.407
+TNS   : -3979.260
+
+Type  : Slow 1200mV 85C Model Setup 'ps2_keyboard:kbd|ascii[0]'
+Slack : -1.668
+TNS   : -6.355
+
+Type  : Slow 1200mV 85C Model Hold 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.170
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.385
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -62.110
+TNS   : -818.975
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.435
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -2.522
-TNS   : -94.777
+Slack : -13.090
+TNS   : -3585.028
+
+Type  : Slow 1200mV 0C Model Setup 'ps2_keyboard:kbd|ascii[0]'
+Slack : -1.724
+TNS   : -6.636
+
+Type  : Slow 1200mV 0C Model Hold 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.311
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.338
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -62.110
+TNS   : -818.975
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.286
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.894
-TNS   : -30.616
+Slack : -6.630
+TNS   : -1662.466
+
+Type  : Fast 1200mV 0C Model Setup 'ps2_keyboard:kbd|ascii[0]'
+Slack : -0.414
+TNS   : -1.418
+
+Type  : Fast 1200mV 0C Model Hold 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.113
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.174
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -51.998
+TNS   : -677.086
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:kbd|ascii[0]'
+Slack : 0.255
+TNS   : 0.000
 
 ------------------------------------------------------------
