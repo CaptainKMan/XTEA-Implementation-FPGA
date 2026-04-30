@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Apr 26 21:45:07 2026
+Analysis & Synthesis Status : Successful - Wed Apr 29 21:58:22 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : XTEA_proj
 Top-level Entity Name : top_xtea_ps2_lcd
 Family : Cyclone IV E
-Total logic elements : 2,279
-    Total combinational functions : 2,266
-    Dedicated logic registers : 635
-Total registers : 635
-Total pins : 16
+Total logic elements : 2,379
+    Total combinational functions : 2,359
+    Dedicated logic registers : 664
+Total registers : 664
+Total pins : 38
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -1,5 +1,5 @@
 Flow report for XTEA_proj
-Sun Apr 26 21:45:30 2026
+Wed Apr 29 21:58:44 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Apr 26 21:45:30 2026       ;
+; Flow Status                        ; Successful - Wed Apr 29 21:58:44 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XTEA_proj                                   ;
 ; Top-level Entity Name              ; top_xtea_ps2_lcd                            ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,293 / 114,480 ( 2 % )                     ;
-;     Total combinational functions  ; 2,266 / 114,480 ( 2 % )                     ;
-;     Dedicated logic registers      ; 635 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 635                                         ;
-; Total pins                         ; 16 / 529 ( 3 % )                            ;
+; Total logic elements               ; 2,374 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 2,359 / 114,480 ( 2 % )                     ;
+;     Dedicated logic registers      ; 664 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 664                                         ;
+; Total pins                         ; 38 / 529 ( 7 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/26/2026 21:44:58 ;
+; Start date & time ; 04/29/2026 21:58:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; XTEA_proj           ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+------------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name      ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 4931000007128.177725429811584          ; --            ; --               ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 4931000007128.177751429318764          ; --            ; --               ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --               ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --               ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --               ; eda_board_design_signal_integrity ;
@@ -102,12 +102,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4883 MB             ; 00:00:15                           ;
-; Fitter               ; 00:00:16     ; 1.1                     ; 6356 MB             ; 00:00:48                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4699 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.4                     ; 4977 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4894 MB             ; 00:00:15                           ;
+; Fitter               ; 00:00:16     ; 1.1                     ; 6349 MB             ; 00:00:49                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4702 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4980 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4662 MB             ; 00:00:01                           ;
-; Total                ; 00:00:28     ; --                      ; --                  ; 00:01:08                           ;
+; Total                ; 00:00:28     ; --                      ; --                  ; 00:01:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
