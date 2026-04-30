@@ -1,0 +1,9 @@
+Key            Function
+===========================================================
+F1             - Select KEY field
+F2             - Select BLOCK field
+F3             - Encrypt
+F4             - Decrypt
+F5             - Toggle ASCII / HEX mode for block entry
+F6             - Clear all fields and start over
+Backspace      - Delete last character in current field
