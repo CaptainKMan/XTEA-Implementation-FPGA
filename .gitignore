@@ -1,0 +1,6 @@
+db/
+incremental_db/
+output_files/*.sof
+output_files/*.pof
+output_files/*.jdi
+simulation/modelsim/*.vo
