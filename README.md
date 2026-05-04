@@ -121,10 +121,6 @@ Backspace - Delete last character in current field
 3. Press **F3** — ciphertext appears on line 2
 4. Press **F2**, type the ciphertext back in, press **F4** — original plaintext returns
 
-### Switch Mode (no keyboard)
-
-Press **KEY[3]** to toggle switch input mode. Set a nibble on **SW[3:0]**, press **KEY[0]** to enter it. **KEY[1]** toggles key/block field, **KEY[2]** triggers encrypt (SW[4]=0) or decrypt (SW[4]=1). Hold **SW[17]** and press **KEY[0]** to clear all fields.
-
 ---
 
 ## Design Notes
@@ -143,10 +139,5 @@ Press **KEY[3]** to toggle switch input mode. Set a nibble on **SW[3:0]**, press
 
 - LCD_DATA pins must be assigned with brackets in the QSF: `LCD_DATA[0]` not `LCD_DATA0`
 - Passive USB-to-PS/2 adapters do not work with modern keyboards; use a native PS/2 keyboard
-- No SDC file included — add one to properly close timing in Quartus
 
 ---
-
-## License
-
-Academic project — CSCI 4532. Not licensed for commercial use.
