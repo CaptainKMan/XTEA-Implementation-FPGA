@@ -1,5 +1,5 @@
 Fitter report for XTEA_proj
-Wed Apr 29 21:58:38 2026
+Tue May 05 17:15:55 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,15 +68,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 29 21:58:38 2026       ;
+; Fitter Status                      ; Successful - Tue May 05 17:15:55 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XTEA_proj                                   ;
 ; Top-level Entity Name              ; top_xtea_ps2_lcd                            ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,374 / 114,480 ( 2 % )                     ;
-;     Total combinational functions  ; 2,359 / 114,480 ( 2 % )                     ;
+; Total logic elements               ; 2,381 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 2,356 / 114,480 ( 2 % )                     ;
 ;     Dedicated logic registers      ; 664 / 114,480 ( < 1 % )                     ;
 ; Total registers                    ; 664                                         ;
 ; Total pins                         ; 38 / 529 ( 7 % )                            ;
@@ -93,7 +93,6 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                             ; Setting                               ; Default Value                         ;
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Device                                                             ; EP4CE115F29C7                         ;                                       ;
-; Nominal Core Supply Voltage                                        ; 1.2V                                  ;                                       ;
 ; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
 ; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
 ; Fit Attempts to Skip                                               ; 0                                     ; 0.0                                   ;
@@ -152,22 +151,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.12        ;
-; Maximum used               ; 12          ;
+; Average used               ; 1.06        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.5%      ;
+;     Processor 2            ;   1.4%      ;
 ;     Processor 3            ;   1.3%      ;
 ;     Processor 4            ;   1.2%      ;
 ;     Processor 5            ;   1.2%      ;
 ;     Processor 6            ;   1.1%      ;
-;     Processor 7            ;   1.1%      ;
-;     Processor 8            ;   1.1%      ;
-;     Processors 9-12        ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -177,8 +173,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 3111 ) ; 0.00 % ( 0 / 3111 )        ; 0.00 % ( 0 / 3111 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 3111 ) ; 0.00 % ( 0 / 3111 )        ; 0.00 % ( 0 / 3111 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 3108 ) ; 0.00 % ( 0 / 3108 )        ; 0.00 % ( 0 / 3108 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 3108 ) ; 0.00 % ( 0 / 3108 )        ; 0.00 % ( 0 / 3108 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -201,7 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 3101 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 3098 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -209,7 +205,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/output_files/XTEA_proj.pin.
+The pin-out file can be found in C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/output_files/XTEA_proj.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -217,26 +213,26 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 2,374 / 114,480 ( 2 % ) ;
-;     -- Combinational with no register       ; 1710                    ;
-;     -- Register only                        ; 15                      ;
-;     -- Combinational with a register        ; 649                     ;
+; Total logic elements                        ; 2,381 / 114,480 ( 2 % ) ;
+;     -- Combinational with no register       ; 1717                    ;
+;     -- Register only                        ; 25                      ;
+;     -- Combinational with a register        ; 639                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 950                     ;
-;     -- 3 input functions                    ; 739                     ;
-;     -- <=2 input functions                  ; 670                     ;
-;     -- Register only                        ; 15                      ;
+;     -- 4 input functions                    ; 952                     ;
+;     -- 3 input functions                    ; 736                     ;
+;     -- <=2 input functions                  ; 668                     ;
+;     -- Register only                        ; 25                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 1690                    ;
+;     -- normal mode                          ; 1687                    ;
 ;     -- arithmetic mode                      ; 669                     ;
 ;                                             ;                         ;
 ; Total registers*                            ; 664 / 117,053 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 664 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 180 / 7,155 ( 3 % )     ;
+; Total LABs:  partially or completely used   ; 202 / 7,155 ( 3 % )     ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 38 / 529 ( 7 % )        ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
@@ -254,11 +250,11 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.8% / 0.8% / 0.8%      ;
-; Peak interconnect usage (total/H/V)         ; 13.0% / 12.9% / 13.3%   ;
-; Maximum fan-out                             ; 658                     ;
+; Average interconnect usage (total/H/V)      ; 0.8% / 0.9% / 0.8%      ;
+; Peak interconnect usage (total/H/V)         ; 12.6% / 12.6% / 12.7%   ;
+; Maximum fan-out                             ; 657                     ;
 ; Highest non-global fan-out                  ; 429                     ;
-; Total fan-out                               ; 9570                    ;
+; Total fan-out                               ; 9574                    ;
 ; Average fan-out                             ; 3.06                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -272,26 +268,26 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 2374 / 114480 ( 2 % )  ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 1710                   ; 0                              ;
-;     -- Register only                        ; 15                     ; 0                              ;
-;     -- Combinational with a register        ; 649                    ; 0                              ;
+; Total logic elements                        ; 2381 / 114480 ( 2 % )  ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 1717                   ; 0                              ;
+;     -- Register only                        ; 25                     ; 0                              ;
+;     -- Combinational with a register        ; 639                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 950                    ; 0                              ;
-;     -- 3 input functions                    ; 739                    ; 0                              ;
-;     -- <=2 input functions                  ; 670                    ; 0                              ;
-;     -- Register only                        ; 15                     ; 0                              ;
+;     -- 4 input functions                    ; 952                    ; 0                              ;
+;     -- 3 input functions                    ; 736                    ; 0                              ;
+;     -- <=2 input functions                  ; 668                    ; 0                              ;
+;     -- Register only                        ; 25                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 1690                   ; 0                              ;
+;     -- normal mode                          ; 1687                   ; 0                              ;
 ;     -- arithmetic mode                      ; 669                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Total registers                             ; 664                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 664 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 180 / 7155 ( 3 % )     ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 202 / 7155 ( 3 % )     ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 38                     ; 0                              ;
@@ -307,8 +303,8 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 9565                   ; 5                              ;
-;     -- Registered Connections               ; 4077                   ; 0                              ;
+;     -- Total Connections                    ; 9569                   ; 5                              ;
+;     -- Registered Connections               ; 4068                   ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -341,31 +337,31 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; CLOCK_50  ; Y2    ; 2        ; 0            ; 36           ; 14           ; 664                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; KEY[0]    ; B10   ; 8        ; 38           ; 73           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; KEY[1]    ; J12   ; 8        ; 40           ; 73           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; KEY[2]    ; A10   ; 8        ; 38           ; 73           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; KEY[3]    ; P2    ; 1        ; 0            ; 43           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; KEY[0]    ; AE13  ; 3        ; 42           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; KEY[1]    ; B11   ; 8        ; 42           ; 73           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; KEY[2]    ; F12   ; 8        ; 33           ; 73           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; KEY[3]    ; H13   ; 8        ; 38           ; 73           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; PS2_KBCLK ; G6    ; 1        ; 0            ; 67           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; PS2_KBDAT ; H5    ; 1        ; 0            ; 59           ; 21           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; RESET_N   ; M23   ; 6        ; 115          ; 40           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[0]     ; P1    ; 1        ; 0            ; 42           ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[10]    ; AE12  ; 3        ; 33           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[11]    ; AC10  ; 3        ; 38           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[12]    ; L23   ; 6        ; 115          ; 49           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[13]    ; U25   ; 5        ; 115          ; 27           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[14]    ; H25   ; 6        ; 115          ; 58           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[15]    ; U1    ; 2        ; 0            ; 30           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[16]    ; G24   ; 6        ; 115          ; 69           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[17]    ; J13   ; 8        ; 40           ; 73           ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[1]     ; C10   ; 8        ; 35           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[2]     ; E12   ; 8        ; 33           ; 73           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[3]     ; G14   ; 8        ; 47           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[4]     ; N8    ; 1        ; 0            ; 42           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[5]     ; AA13  ; 3        ; 52           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[6]     ; B8    ; 8        ; 16           ; 73           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[7]     ; T4    ; 2        ; 0            ; 33           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[8]     ; AG6   ; 3        ; 11           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[9]     ; AF7   ; 3        ; 20           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[0]     ; F15   ; 7        ; 58           ; 73           ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[10]    ; AA17  ; 4        ; 89           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[11]    ; H10   ; 8        ; 20           ; 73           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[12]    ; Y24   ; 5        ; 115          ; 13           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[13]    ; AF5   ; 3        ; 5            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[14]    ; E10   ; 8        ; 18           ; 73           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[15]    ; A3    ; 8        ; 5            ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[16]    ; AE23  ; 4        ; 105          ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[17]    ; A11   ; 8        ; 42           ; 73           ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[1]     ; E15   ; 7        ; 58           ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[2]     ; C15   ; 7        ; 58           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[3]     ; D13   ; 8        ; 54           ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[4]     ; B10   ; 8        ; 38           ; 73           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[5]     ; A21   ; 7        ; 89           ; 73           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[6]     ; C25   ; 7        ; 105          ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[7]     ; AB26  ; 5        ; 115          ; 15           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[8]     ; A25   ; 7        ; 109          ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[9]     ; R27   ; 5        ; 115          ; 34           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -389,29 +385,32 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Dual Purpose and Dedicated Pins                                                                                                      ;
-+----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
-; Location ; Pin Name                                 ; Reserved As              ; User Signal Name        ; Pin Type                  ;
-+----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
-; G6       ; DIFFIO_L3p, nRESET                       ; Use as regular IO        ; PS2_KBCLK               ; Dual Purpose Pin          ;
-; F4       ; DIFFIO_L5n, DATA1, ASDO                  ; As input tri-stated      ; ~ALTERA_ASDO_DATA1~     ; Dual Purpose Pin          ;
-; E2       ; DIFFIO_L8p, FLASH_nCE, nCSO              ; As input tri-stated      ; ~ALTERA_FLASH_nCE_nCSO~ ; Dual Purpose Pin          ;
-; M6       ; nSTATUS                                  ; -                        ; -                       ; Dedicated Programming Pin ;
-; P3       ; DCLK                                     ; As output driving ground ; ~ALTERA_DCLK~           ; Dual Purpose Pin          ;
-; N7       ; DATA0                                    ; As input tri-stated      ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
-; P4       ; nCONFIG                                  ; -                        ; -                       ; Dedicated Programming Pin ;
-; R8       ; nCE                                      ; -                        ; -                       ; Dedicated Programming Pin ;
-; P24      ; CONF_DONE                                ; -                        ; -                       ; Dedicated Programming Pin ;
-; N22      ; MSEL0                                    ; -                        ; -                       ; Dedicated Programming Pin ;
-; P23      ; MSEL1                                    ; -                        ; -                       ; Dedicated Programming Pin ;
-; M22      ; MSEL2                                    ; -                        ; -                       ; Dedicated Programming Pin ;
-; P22      ; MSEL3                                    ; -                        ; -                       ; Dedicated Programming Pin ;
-; P28      ; DIFFIO_R23n, nCEO                        ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; A10      ; DIFFIO_T23n, PADD18                      ; Use as regular IO        ; KEY[2]                  ; Dual Purpose Pin          ;
-; B10      ; DIFFIO_T23p, DATA4                       ; Use as regular IO        ; KEY[0]                  ; Dual Purpose Pin          ;
-; E12      ; DIFFIO_T20n, DATA14, DQS3T/CQ3T#,DPCLK11 ; Use as regular IO        ; SW[2]                   ; Dual Purpose Pin          ;
-+----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Dual Purpose and Dedicated Pins                                                                                         ;
++----------+-----------------------------+--------------------------+-------------------------+---------------------------+
+; Location ; Pin Name                    ; Reserved As              ; User Signal Name        ; Pin Type                  ;
++----------+-----------------------------+--------------------------+-------------------------+---------------------------+
+; G6       ; DIFFIO_L3p, nRESET          ; Use as regular IO        ; PS2_KBCLK               ; Dual Purpose Pin          ;
+; F4       ; DIFFIO_L5n, DATA1, ASDO     ; As input tri-stated      ; ~ALTERA_ASDO_DATA1~     ; Dual Purpose Pin          ;
+; E2       ; DIFFIO_L8p, FLASH_nCE, nCSO ; As input tri-stated      ; ~ALTERA_FLASH_nCE_nCSO~ ; Dual Purpose Pin          ;
+; M6       ; nSTATUS                     ; -                        ; -                       ; Dedicated Programming Pin ;
+; P3       ; DCLK                        ; As output driving ground ; ~ALTERA_DCLK~           ; Dual Purpose Pin          ;
+; N7       ; DATA0                       ; As input tri-stated      ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
+; P4       ; nCONFIG                     ; -                        ; -                       ; Dedicated Programming Pin ;
+; R8       ; nCE                         ; -                        ; -                       ; Dedicated Programming Pin ;
+; P24      ; CONF_DONE                   ; -                        ; -                       ; Dedicated Programming Pin ;
+; N22      ; MSEL0                       ; -                        ; -                       ; Dedicated Programming Pin ;
+; P23      ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
+; M22      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
+; P22      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
+; P28      ; DIFFIO_R23n, nCEO           ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
+; C15      ; DIFFIO_T32n, PADD13         ; Use as regular IO        ; SW[2]                   ; Dual Purpose Pin          ;
+; A11      ; DIFFIO_T25n, DATA2          ; Use as regular IO        ; SW[17]                  ; Dual Purpose Pin          ;
+; B11      ; DIFFIO_T25p, DATA3          ; Use as regular IO        ; KEY[1]                  ; Dual Purpose Pin          ;
+; B10      ; DIFFIO_T23p, DATA4          ; Use as regular IO        ; SW[4]                   ; Dual Purpose Pin          ;
+; H13      ; DIFFIO_T22p, DATA15         ; Use as regular IO        ; KEY[3]                  ; Dual Purpose Pin          ;
+; F12      ; DIFFIO_T20p, DATA13         ; Use as regular IO        ; KEY[2]                  ; Dual Purpose Pin          ;
++----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
 +------------------------------------------------------------+
@@ -419,14 +418,14 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 21 / 56 ( 38 % ) ; 2.5V          ; --           ;
-; 2        ; 3 / 63 ( 5 % )   ; 2.5V          ; --           ;
-; 3        ; 5 / 73 ( 7 % )   ; 2.5V          ; --           ;
-; 4        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
-; 5        ; 1 / 65 ( 2 % )   ; 2.5V          ; --           ;
-; 6        ; 5 / 58 ( 9 % )   ; 2.5V          ; --           ;
-; 7        ; 0 / 72 ( 0 % )   ; 2.5V          ; --           ;
-; 8        ; 8 / 71 ( 11 % )  ; 2.5V          ; --           ;
+; 1        ; 18 / 56 ( 32 % ) ; 2.5V          ; --           ;
+; 2        ; 1 / 63 ( 2 % )   ; 2.5V          ; --           ;
+; 3        ; 2 / 73 ( 3 % )   ; 2.5V          ; --           ;
+; 4        ; 2 / 71 ( 3 % )   ; 2.5V          ; --           ;
+; 5        ; 3 / 65 ( 5 % )   ; 2.5V          ; --           ;
+; 6        ; 2 / 58 ( 3 % )   ; 2.5V          ; --           ;
+; 7        ; 6 / 72 ( 8 % )   ; 2.5V          ; --           ;
+; 8        ; 9 / 71 ( 13 % )  ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -436,15 +435,15 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage                                            ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 ; A2       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; A3       ; 535        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A3       ; 535        ; 8        ; SW[15]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A4       ; 532        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A5       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; A6       ; 504        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A7       ; 501        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A8       ; 517        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A9       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; A10      ; 491        ; 8        ; KEY[2]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A11      ; 487        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A10      ; 491        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A11      ; 487        ; 8        ; SW[17]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A12      ; 482        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A13      ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; A14      ; 472        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -454,11 +453,11 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; A18      ; 442        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A19      ; 440        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A20      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; A21      ; 425        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A21      ; 425        ; 7        ; SW[5]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A22      ; 423        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A23      ; 412        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A24      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; A25      ; 405        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A25      ; 405        ; 7        ; SW[8]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A26      ; 404        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A27      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AA1      ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -473,11 +472,11 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; AA10     ; 155        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA11     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AA12     ; 188        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AA13     ; 190        ; 3        ; SW[5]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA13     ; 190        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA14     ; 191        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA15     ; 213        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AA16     ; 211        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AA17     ; 241        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AA17     ; 241        ; 4        ; SW[10]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA18     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AA19     ; 264        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA20     ;            ;          ; GNDA4                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -514,7 +513,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; AB23     ; 276        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB24     ; 274        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB25     ; 292        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AB26     ; 291        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AB26     ; 291        ; 5        ; SW[7]                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AB27     ; 296        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB28     ; 295        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AC1      ; 94         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -526,7 +525,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; AC7      ; 144        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC8      ; 153        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC9      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AC10     ; 174        ; 3        ; SW[11]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC10     ; 174        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC11     ; 185        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC12     ; 179        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC13     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -584,8 +583,8 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; AE9      ; 163        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE10     ; 165        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE11     ; 171        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE12     ; 169        ; 3        ; SW[10]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE13     ; 177        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE12     ; 169        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE13     ; 177        ; 3        ; KEY[0]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE14     ; 183        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE15     ; 205        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE16     ; 209        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -595,7 +594,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; AE20     ; 235        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE21     ; 238        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE22     ; 251        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE23     ; 261        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE23     ; 261        ; 4        ; SW[16]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE24     ; 256        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE25     ; 243        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE26     ; 278        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -605,9 +604,9 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; AF2      ; 123        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AF3      ; 138        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF4      ; 131        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF5      ; 136        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF5      ; 136        ; 3        ; SW[13]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF6      ; 139        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF7      ; 159        ; 3        ; SW[9]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF7      ; 159        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF8      ; 162        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF9      ; 160        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF10     ; 166        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -634,7 +633,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; AG3      ; 133        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG4      ; 141        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG5      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG6      ; 145        ; 3        ; SW[8]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG6      ; 145        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG7      ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG8      ; 156        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG9      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -690,10 +689,10 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; B5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B6       ; 505        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B7       ; 502        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B8       ; 518        ; 8        ; SW[6]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B8       ; 518        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B10      ; 492        ; 8        ; KEY[0]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B11      ; 488        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B10      ; 492        ; 8        ; SW[4]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 488        ; 8        ; KEY[1]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B14      ; 473        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -720,12 +719,12 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; C7       ; 521        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C8       ; 519        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C9       ; 510        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C10      ; 495        ; 8        ; SW[1]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C10      ; 495        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C11      ; 508        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C12      ; 478        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C13      ; 474        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C14      ; 476        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C15      ; 468        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C15      ; 468        ; 7        ; SW[2]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C16      ; 460        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C17      ; 438        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C18      ; 429        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -735,7 +734,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; C22      ; 418        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C23      ; 415        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C24      ; 416        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C25      ; 411        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C25      ; 411        ; 7        ; SW[6]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C26      ; 400        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C27      ; 382        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C28      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -751,7 +750,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; D10      ; 496        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D11      ; 509        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D12      ; 479        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D13      ; 475        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D13      ; 475        ; 8        ; SW[3]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D14      ; 477        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 469        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D16      ; 461        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -776,12 +775,12 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; E7       ; 523        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E8       ; 526        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E9       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; E10      ; 516        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E10      ; 516        ; 8        ; SW[14]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E11      ; 499        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E12      ; 497        ; 8        ; SW[2]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E12      ; 497        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E13      ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E14      ; 486        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E15      ; 467        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E15      ; 467        ; 7        ; SW[1]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E17      ; 456        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E18      ; 427        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -806,10 +805,10 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; F9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F10      ; 512        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F11      ; 500        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F12      ; 498        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F12      ; 498        ; 8        ; KEY[2]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F14      ; 485        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F15      ; 466        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F15      ; 466        ; 7        ; SW[0]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F16      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F17      ; 455        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F18      ; 428        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -836,7 +835,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; G11      ; 506        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G12      ; 503        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G13      ; 493        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G14      ; 484        ; 8        ; SW[3]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G14      ; 484        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G15      ; 457        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G16      ; 453        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G17      ; 437        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -846,7 +845,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; G21      ; 445        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G22      ; 449        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G23      ; 398        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; G24      ; 397        ; 6        ; SW[16]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G24      ; 397        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G25      ; 393        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G26      ; 392        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G27      ; 367        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -860,10 +859,10 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; H7       ; 4          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; H8       ; 529        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H9       ;            ;          ; GNDA3                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H10      ; 514        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H10      ; 514        ; 8        ; SW[11]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H11      ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; H12      ; 507        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H13      ; 494        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H13      ; 494        ; 8        ; KEY[3]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H14      ; 480        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H15      ; 464        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H16      ; 459        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -875,7 +874,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; H22      ; 399        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H23      ; 391        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H24      ; 390        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; H25      ; 377        ; 6        ; SW[14]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H25      ; 377        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H26      ; 376        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -890,8 +889,8 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; J9       ;            ;          ; VCCD_PLL3                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J10      ; 515        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J12      ; 490        ; 8        ; KEY[1]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; J13      ; 489        ; 8        ; SW[17]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; J12      ; 490        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; J13      ; 489        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J14      ; 481        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J15      ; 465        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J16      ; 458        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -957,7 +956,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; L20      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; L21      ; 385        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L22      ; 384        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L23      ; 360        ; 6        ; SW[12]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L23      ; 360        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L24      ; 359        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L25      ; 369        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L26      ; 363        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -998,7 +997,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; N5       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; N6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N7       ; 56         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
-; N8       ; 54         ; 1        ; SW[4]                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N8       ; 54         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N10      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1019,8 +1018,8 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; N26      ; 351        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; P1       ; 53         ; 1        ; SW[0]                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P2       ; 52         ; 1        ; KEY[3]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P1       ; 53         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; P2       ; 52         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P3       ; 55         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; P4       ; 57         ; 1        ; ^nCONFIG                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P5       ; 59         ; 1        ; #TCK                                                      ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1073,12 +1072,12 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; R24      ; 330        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R25      ; 327        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R26      ; 326        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; R27      ; 329        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; R27      ; 329        ; 5        ; SW[9]                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R28      ; 328        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T1       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; T2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T3       ; 76         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; T4       ; 75         ; 2        ; SW[7]                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T4       ; 75         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T5       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; T6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T7       ; 78         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -1103,7 +1102,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; T26      ; 322        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T28      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; U1       ; 80         ; 2        ; SW[15]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U1       ; 80         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U2       ; 79         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U3       ; 71         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U4       ; 72         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1127,7 +1126,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; U22      ; 313        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U23      ; 305        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; U24      ; 316        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; U25      ; 315        ; 5        ; SW[13]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U25      ; 315        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U26      ; 314        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U27      ; 318        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U28      ; 317        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1210,7 +1209,7 @@ The pin-out file can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Imple
 ; Y21      ;            ; --       ; VCCA4                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; Y22      ; 320        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y23      ; 288        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; Y24      ; 287        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; Y24      ; 287        ; 5        ; SW[12]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y25      ; 298        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y26      ; 297        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y27      ; 336        ; 5        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -1292,15 +1291,15 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                               ; Entity Name         ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top_xtea_ps2_lcd                         ; 2374 (583)  ; 664 (412)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 38   ; 0            ; 1710 (171)   ; 15 (5)            ; 649 (405)        ; |top_xtea_ps2_lcd                                                                                                 ; top_xtea_ps2_lcd    ; work         ;
-;    |ascii_hex_nibble:ah|                  ; 13 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|ascii_hex_nibble:ah                                                                             ; ascii_hex_nibble    ; work         ;
-;    |hex64_to_ascii16:fmt|                 ; 144 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 144 (0)      ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt                                                                            ; hex64_to_ascii16    ; work         ;
+; |top_xtea_ps2_lcd                         ; 2381 (593)  ; 664 (412)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 38   ; 0            ; 1717 (182)   ; 25 (12)           ; 639 (392)        ; |top_xtea_ps2_lcd                                                                                                 ; top_xtea_ps2_lcd    ; work         ;
+;    |ascii_hex_nibble:ah|                  ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|ascii_hex_nibble:ah                                                                             ; ascii_hex_nibble    ; work         ;
+;    |hex64_to_ascii16:fmt|                 ; 144 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 141 (0)      ; 0 (0)             ; 3 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt                                                                            ; hex64_to_ascii16    ; work         ;
 ;       |hex_nibble_to_ascii:nibs[0].conv|  ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[0].conv                                           ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[10].conv| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[10].conv                                          ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[11].conv| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[11].conv                                          ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[12].conv| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[12].conv                                          ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[13].conv| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[13].conv                                          ; hex_nibble_to_ascii ; work         ;
-;       |hex_nibble_to_ascii:nibs[14].conv| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[14].conv                                          ; hex_nibble_to_ascii ; work         ;
+;       |hex_nibble_to_ascii:nibs[14].conv| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 3 (3)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[14].conv                                          ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[15].conv| ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[15].conv                                          ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[1].conv|  ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[1].conv                                           ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[2].conv|  ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[2].conv                                           ; hex_nibble_to_ascii ; work         ;
@@ -1336,8 +1335,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |lpm_divide_j9m:auto_generated|     ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|lpm_divide:Mod2|lpm_divide_j9m:auto_generated                                                   ; lpm_divide_j9m      ; work         ;
 ;          |sign_div_unsign_8kh:divider|    ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|lpm_divide:Mod2|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
 ;             |alt_u_div_44f:divider|       ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; |top_xtea_ps2_lcd|lpm_divide:Mod2|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider ; alt_u_div_44f       ; work         ;
-;    |ps2_keyboard:kbd|                     ; 119 (119)   ; 37 (37)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 82 (82)      ; 4 (4)             ; 33 (33)          ; |top_xtea_ps2_lcd|ps2_keyboard:kbd                                                                                ; ps2_keyboard        ; work         ;
-;    |xtea_core:core|                       ; 1177 (1177) ; 169 (169)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1006 (1006)  ; 0 (0)             ; 171 (171)        ; |top_xtea_ps2_lcd|xtea_core:core                                                                                  ; xtea_core           ; work         ;
+;    |ps2_keyboard:kbd|                     ; 120 (120)   ; 37 (37)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 83 (83)      ; 5 (5)             ; 32 (32)          ; |top_xtea_ps2_lcd|ps2_keyboard:kbd                                                                                ; ps2_keyboard        ; work         ;
+;    |xtea_core:core|                       ; 1179 (1179) ; 169 (169)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1005 (1005)  ; 2 (2)             ; 172 (172)        ; |top_xtea_ps2_lcd|xtea_core:core                                                                                  ; xtea_core           ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1373,13 +1372,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_DATA[6] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LCD_DATA[7] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; CLOCK_50    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; SW[1]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[1]       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[2]       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[0]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[3]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[17]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; PS2_KBDAT   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; KEY[0]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; PS2_KBDAT   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; KEY[0]      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; KEY[1]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; KEY[3]      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[4]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
@@ -1408,14 +1407,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[16]                               ;                   ;         ;
 ; CLOCK_50                             ;                   ;         ;
 ; SW[1]                                ;                   ;         ;
-;      - l1~14                         ; 0                 ; 6       ;
-;      - l1~19                         ; 0                 ; 6       ;
-;      - l1~34                         ; 0                 ; 6       ;
-;      - l1~44                         ; 0                 ; 6       ;
-;      - l1~45                         ; 0                 ; 6       ;
-;      - l1~47                         ; 0                 ; 6       ;
-;      - block~123                     ; 0                 ; 6       ;
-;      - key_buf~96                    ; 0                 ; 6       ;
+;      - l1~14                         ; 1                 ; 6       ;
+;      - l1~19                         ; 1                 ; 6       ;
+;      - l1~34                         ; 1                 ; 6       ;
+;      - l1~44                         ; 1                 ; 6       ;
+;      - l1~45                         ; 1                 ; 6       ;
+;      - l1~47                         ; 1                 ; 6       ;
+;      - block~120                     ; 1                 ; 6       ;
+;      - key_buf~96                    ; 1                 ; 6       ;
 ; SW[2]                                ;                   ;         ;
 ;      - l1~14                         ; 1                 ; 6       ;
 ;      - l1~19                         ; 1                 ; 6       ;
@@ -1423,13 +1422,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - l1~44                         ; 1                 ; 6       ;
 ;      - l1~45                         ; 1                 ; 6       ;
 ;      - l1~47                         ; 1                 ; 6       ;
-;      - block~126                     ; 1                 ; 6       ;
+;      - block~123                     ; 1                 ; 6       ;
 ;      - key_buf~92                    ; 1                 ; 6       ;
 ; SW[0]                                ;                   ;         ;
 ;      - l1~14                         ; 0                 ; 6       ;
 ;      - l1~19                         ; 0                 ; 6       ;
 ;      - l1~34                         ; 0                 ; 6       ;
-;      - block~109                     ; 0                 ; 6       ;
+;      - block~106                     ; 0                 ; 6       ;
 ;      - key_buf~100                   ; 0                 ; 6       ;
 ; SW[3]                                ;                   ;         ;
 ;      - l1~14                         ; 0                 ; 6       ;
@@ -1438,28 +1437,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - l1~44                         ; 0                 ; 6       ;
 ;      - l1~45                         ; 0                 ; 6       ;
 ;      - l1~47                         ; 0                 ; 6       ;
-;      - block~120                     ; 0                 ; 6       ;
+;      - block~117                     ; 0                 ; 6       ;
 ;      - key_buf~84                    ; 0                 ; 6       ;
 ; SW[17]                               ;                   ;         ;
 ;      - always3~3                     ; 0                 ; 6       ;
+;      - block~72                      ; 0                 ; 6       ;
 ;      - sel_key~2                     ; 0                 ; 6       ;
-;      - block~69                      ; 0                 ; 6       ;
 ;      - key_buf~3                     ; 0                 ; 6       ;
-;      - block[0]~131                  ; 0                 ; 6       ;
+;      - block[0]~128                  ; 0                 ; 6       ;
 ; PS2_KBDAT                            ;                   ;         ;
-;      - ps2_keyboard:kbd|code[0]~0    ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[1]~0  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[2]~1  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[3]~2  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[4]~3  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[9]~4  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[7]~5  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[5]~6  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[6]~7  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[8]~8  ; 0                 ; 6       ;
-;      - ps2_keyboard:kbd|buffer[0]~9  ; 0                 ; 6       ;
+;      - ps2_keyboard:kbd|code[0]~0    ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[1]~0  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[2]~1  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[3]~2  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[4]~3  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[9]~4  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[7]~5  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[5]~6  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[6]~7  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[8]~8  ; 1                 ; 6       ;
+;      - ps2_keyboard:kbd|buffer[0]~9  ; 1                 ; 6       ;
 ; KEY[0]                               ;                   ;         ;
-;      - key_r0[0]~0                   ; 0                 ; 6       ;
+;      - key_r0[0]~0                   ; 1                 ; 6       ;
 ; KEY[1]                               ;                   ;         ;
 ;      - key_r0[1]~1                   ; 0                 ; 6       ;
 ; KEY[3]                               ;                   ;         ;
@@ -1479,44 +1478,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                           ; Location           ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                       ; PIN_Y2             ; 7       ; Clock                                 ; no     ; --                   ; --               ; --                        ;
-; CLOCK_50                       ; PIN_Y2             ; 658     ; Clock                                 ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; ascii_hex_nibble:ah|valid~1    ; LCCOMB_X40_Y39_N2  ; 4       ; Latch enable                          ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; blk_ascii_count[2]~9           ; LCCOMB_X38_Y41_N6  ; 3       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; blk_hex_count[4]~14            ; LCCOMB_X36_Y40_N28 ; 11      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; blk_hex_count[4]~24            ; LCCOMB_X39_Y42_N16 ; 5       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; block[0]~118                   ; LCCOMB_X40_Y41_N6  ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; block[45]~130                  ; LCCOMB_X42_Y41_N6  ; 57      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; block[45]~66                   ; LCCOMB_X42_Y41_N12 ; 56      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; block[45]~84                   ; LCCOMB_X41_Y39_N10 ; 56      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; block[4]~97                    ; LCCOMB_X41_Y39_N26 ; 3       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; key_buf[102]~12                ; LCCOMB_X38_Y40_N12 ; 124     ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; key_buf[3]~88                  ; LCCOMB_X39_Y39_N26 ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; key_count[2]~18                ; LCCOMB_X36_Y40_N26 ; 6       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; lcd_text:lcd|LCD_DATA~0        ; LCCOMB_X30_Y44_N12 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; lcd_text:lcd|phase~10          ; LCCOMB_X30_Y44_N26 ; 7       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; lcd_text:lcd|state.S_PWRON     ; FF_X27_Y44_N7      ; 11      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; por_cnt[19]                    ; FF_X27_Y43_N29     ; 429     ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:kbd|ascii[0]~17   ; LCCOMB_X38_Y43_N26 ; 7       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:kbd|code[0]~1     ; LCCOMB_X36_Y43_N28 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:kbd|code[6]       ; FF_X36_Y43_N11     ; 11      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:kbd|count[3]~1    ; LCCOMB_X34_Y43_N2  ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; sw_mode                        ; FF_X27_Y43_N25     ; 47      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; xtea_core:core|block_out[42]~1 ; LCCOMB_X57_Y35_N26 ; 64      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; xtea_core:core|state.S_RUN     ; FF_X60_Y35_N17     ; 163     ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; xtea_core:core|sum[6]~30       ; LCCOMB_X60_Y35_N28 ; 101     ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; xtea_core:core|sum[6]~31       ; LCCOMB_X57_Y35_N30 ; 6       ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                       ; PIN_Y2             ; 8       ; Clock                                 ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                       ; PIN_Y2             ; 657     ; Clock                                 ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; ascii_hex_nibble:ah|valid~1    ; LCCOMB_X21_Y38_N12 ; 4       ; Latch enable                          ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; blk_ascii_count[2]~9           ; LCCOMB_X36_Y38_N2  ; 3       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; blk_hex_count[4]~20            ; LCCOMB_X35_Y39_N12 ; 11      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; blk_hex_count[4]~30            ; LCCOMB_X36_Y39_N16 ; 5       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; block[0]~115                   ; LCCOMB_X46_Y39_N12 ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; block[45]~126                  ; LCCOMB_X46_Y39_N6  ; 57      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; block[45]~68                   ; LCCOMB_X46_Y39_N4  ; 56      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; block[45]~82                   ; LCCOMB_X46_Y39_N26 ; 56      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; block[4]~94                    ; LCCOMB_X46_Y39_N20 ; 3       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; key_buf[102]~12                ; LCCOMB_X52_Y42_N8  ; 124     ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; key_buf[3]~88                  ; LCCOMB_X52_Y42_N18 ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; key_count[2]~18                ; LCCOMB_X35_Y39_N14 ; 6       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; lcd_text:lcd|LCD_DATA~0        ; LCCOMB_X43_Y43_N20 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; lcd_text:lcd|phase~10          ; LCCOMB_X43_Y43_N28 ; 7       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; lcd_text:lcd|state.S_PWRON     ; FF_X43_Y43_N31     ; 11      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; por_cnt[19]                    ; FF_X42_Y40_N23     ; 429     ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:kbd|ascii[0]~17   ; LCCOMB_X19_Y42_N12 ; 7       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:kbd|code[0]~1     ; LCCOMB_X19_Y42_N14 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:kbd|code[6]       ; FF_X19_Y42_N25     ; 11      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:kbd|count[3]~1    ; LCCOMB_X13_Y44_N2  ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; sw_mode                        ; FF_X36_Y43_N17     ; 46      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; xtea_core:core|block_out[42]~1 ; LCCOMB_X57_Y36_N30 ; 64      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; xtea_core:core|state.S_RUN     ; FF_X72_Y42_N25     ; 163     ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; xtea_core:core|sum[6]~30       ; LCCOMB_X69_Y38_N28 ; 101     ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; xtea_core:core|sum[6]~31       ; LCCOMB_X69_Y38_N14 ; 6       ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
 +--------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                            ;
-+-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                        ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50                    ; PIN_Y2            ; 658     ; 13                                   ; Global Clock         ; GCLK4            ; --                        ;
-; ascii_hex_nibble:ah|valid~1 ; LCCOMB_X40_Y39_N2 ; 4       ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
-+-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                             ;
++-----------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                        ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CLOCK_50                    ; PIN_Y2             ; 657     ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; ascii_hex_nibble:ah|valid~1 ; LCCOMB_X21_Y38_N12 ; 4       ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
++-----------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------+
@@ -1524,168 +1523,164 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+---------------------------+
 ; Routing Resource Type ; Usage                     ;
 +-----------------------+---------------------------+
-; Block interconnects   ; 3,419 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 41 / 10,120 ( < 1 % )     ;
-; C4 interconnects      ; 1,731 / 209,544 ( < 1 % ) ;
-; Direct links          ; 604 / 342,891 ( < 1 % )   ;
+; Block interconnects   ; 3,303 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 35 / 10,120 ( < 1 % )     ;
+; C4 interconnects      ; 1,813 / 209,544 ( < 1 % ) ;
+; Direct links          ; 429 / 342,891 ( < 1 % )   ;
 ; Global clocks         ; 2 / 20 ( 10 % )           ;
-; Local interconnects   ; 923 / 119,088 ( < 1 % )   ;
-; R24 interconnects     ; 56 / 9,963 ( < 1 % )      ;
-; R4 interconnects      ; 2,233 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 948 / 119,088 ( < 1 % )   ;
+; R24 interconnects     ; 77 / 9,963 ( < 1 % )      ;
+; R4 interconnects      ; 2,412 / 289,782 ( < 1 % ) ;
 +-----------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 13.19) ; Number of LABs  (Total = 180) ;
+; Number of Logic Elements  (Average = 11.79) ; Number of LABs  (Total = 202) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 12                            ;
-; 2                                           ; 7                             ;
-; 3                                           ; 3                             ;
+; 1                                           ; 26                            ;
+; 2                                           ; 15                            ;
+; 3                                           ; 4                             ;
 ; 4                                           ; 3                             ;
-; 5                                           ; 1                             ;
+; 5                                           ; 2                             ;
 ; 6                                           ; 1                             ;
-; 7                                           ; 1                             ;
-; 8                                           ; 2                             ;
-; 9                                           ; 2                             ;
-; 10                                          ; 7                             ;
-; 11                                          ; 2                             ;
-; 12                                          ; 4                             ;
-; 13                                          ; 2                             ;
-; 14                                          ; 5                             ;
-; 15                                          ; 9                             ;
-; 16                                          ; 119                           ;
+; 7                                           ; 0                             ;
+; 8                                           ; 3                             ;
+; 9                                           ; 0                             ;
+; 10                                          ; 4                             ;
+; 11                                          ; 4                             ;
+; 12                                          ; 6                             ;
+; 13                                          ; 1                             ;
+; 14                                          ; 6                             ;
+; 15                                          ; 24                            ;
+; 16                                          ; 103                           ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.27) ; Number of LABs  (Total = 180) ;
+; LAB-wide Signals  (Average = 1.19) ; Number of LABs  (Total = 202) ;
 +------------------------------------+-------------------------------+
-; 1 Clock                            ; 112                           ;
-; 1 Clock enable                     ; 46                            ;
-; 1 Sync. clear                      ; 40                            ;
-; 1 Sync. load                       ; 12                            ;
-; 2 Clock enables                    ; 17                            ;
-; 2 Clocks                           ; 2                             ;
+; 1 Clock                            ; 121                           ;
+; 1 Clock enable                     ; 44                            ;
+; 1 Sync. clear                      ; 41                            ;
+; 1 Sync. load                       ; 9                             ;
+; 2 Clock enables                    ; 26                            ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 16.79) ; Number of LABs  (Total = 180) ;
+; Number of Signals Sourced  (Average = 14.99) ; Number of LABs  (Total = 202) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 9                             ;
-; 2                                            ; 6                             ;
+; 1                                            ; 20                            ;
+; 2                                            ; 17                            ;
 ; 3                                            ; 5                             ;
 ; 4                                            ; 3                             ;
 ; 5                                            ; 2                             ;
-; 6                                            ; 1                             ;
-; 7                                            ; 2                             ;
-; 8                                            ; 0                             ;
-; 9                                            ; 1                             ;
-; 10                                           ; 4                             ;
-; 11                                           ; 2                             ;
-; 12                                           ; 4                             ;
+; 6                                            ; 2                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 1                             ;
+; 9                                            ; 0                             ;
+; 10                                           ; 5                             ;
+; 11                                           ; 1                             ;
+; 12                                           ; 3                             ;
 ; 13                                           ; 1                             ;
-; 14                                           ; 4                             ;
-; 15                                           ; 7                             ;
-; 16                                           ; 32                            ;
-; 17                                           ; 7                             ;
-; 18                                           ; 8                             ;
-; 19                                           ; 6                             ;
-; 20                                           ; 6                             ;
-; 21                                           ; 11                            ;
-; 22                                           ; 16                            ;
-; 23                                           ; 25                            ;
-; 24                                           ; 4                             ;
-; 25                                           ; 2                             ;
-; 26                                           ; 5                             ;
-; 27                                           ; 2                             ;
+; 14                                           ; 2                             ;
+; 15                                           ; 6                             ;
+; 16                                           ; 37                            ;
+; 17                                           ; 6                             ;
+; 18                                           ; 9                             ;
+; 19                                           ; 7                             ;
+; 20                                           ; 14                            ;
+; 21                                           ; 10                            ;
+; 22                                           ; 11                            ;
+; 23                                           ; 20                            ;
+; 24                                           ; 3                             ;
+; 25                                           ; 3                             ;
+; 26                                           ; 8                             ;
+; 27                                           ; 1                             ;
 ; 28                                           ; 0                             ;
-; 29                                           ; 0                             ;
-; 30                                           ; 3                             ;
-; 31                                           ; 0                             ;
-; 32                                           ; 2                             ;
+; 29                                           ; 2                             ;
+; 30                                           ; 1                             ;
+; 31                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 9.47) ; Number of LABs  (Total = 180) ;
+; Number of Signals Sourced Out  (Average = 8.42) ; Number of LABs  (Total = 202) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 14                            ;
-; 2                                               ; 9                             ;
-; 3                                               ; 6                             ;
-; 4                                               ; 5                             ;
-; 5                                               ; 7                             ;
-; 6                                               ; 6                             ;
-; 7                                               ; 12                            ;
-; 8                                               ; 10                            ;
-; 9                                               ; 20                            ;
-; 10                                              ; 17                            ;
-; 11                                              ; 14                            ;
-; 12                                              ; 10                            ;
-; 13                                              ; 7                             ;
-; 14                                              ; 5                             ;
-; 15                                              ; 2                             ;
-; 16                                              ; 34                            ;
+; 1                                               ; 29                            ;
+; 2                                               ; 19                            ;
+; 3                                               ; 11                            ;
+; 4                                               ; 4                             ;
+; 5                                               ; 5                             ;
+; 6                                               ; 5                             ;
+; 7                                               ; 6                             ;
+; 8                                               ; 12                            ;
+; 9                                               ; 16                            ;
+; 10                                              ; 16                            ;
+; 11                                              ; 15                            ;
+; 12                                              ; 18                            ;
+; 13                                              ; 8                             ;
+; 14                                              ; 4                             ;
+; 15                                              ; 4                             ;
+; 16                                              ; 27                            ;
 ; 17                                              ; 0                             ;
-; 18                                              ; 0                             ;
+; 18                                              ; 2                             ;
 ; 19                                              ; 1                             ;
-; 20                                              ; 0                             ;
-; 21                                              ; 1                             ;
 +-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 17.72) ; Number of LABs  (Total = 180) ;
+; Number of Distinct Inputs  (Average = 15.66) ; Number of LABs  (Total = 202) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 0                             ;
-; 2                                            ; 10                            ;
-; 3                                            ; 1                             ;
-; 4                                            ; 6                             ;
-; 5                                            ; 2                             ;
-; 6                                            ; 18                            ;
-; 7                                            ; 2                             ;
-; 8                                            ; 4                             ;
-; 9                                            ; 6                             ;
-; 10                                           ; 3                             ;
-; 11                                           ; 1                             ;
-; 12                                           ; 6                             ;
-; 13                                           ; 3                             ;
-; 14                                           ; 3                             ;
-; 15                                           ; 13                            ;
-; 16                                           ; 8                             ;
-; 17                                           ; 10                            ;
-; 18                                           ; 5                             ;
-; 19                                           ; 2                             ;
-; 20                                           ; 8                             ;
-; 21                                           ; 5                             ;
-; 22                                           ; 3                             ;
-; 23                                           ; 2                             ;
-; 24                                           ; 6                             ;
-; 25                                           ; 5                             ;
+; 1                                            ; 1                             ;
+; 2                                            ; 17                            ;
+; 3                                            ; 2                             ;
+; 4                                            ; 15                            ;
+; 5                                            ; 6                             ;
+; 6                                            ; 22                            ;
+; 7                                            ; 5                             ;
+; 8                                            ; 5                             ;
+; 9                                            ; 1                             ;
+; 10                                           ; 5                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 2                             ;
+; 14                                           ; 7                             ;
+; 15                                           ; 4                             ;
+; 16                                           ; 9                             ;
+; 17                                           ; 5                             ;
+; 18                                           ; 4                             ;
+; 19                                           ; 13                            ;
+; 20                                           ; 7                             ;
+; 21                                           ; 6                             ;
+; 22                                           ; 1                             ;
+; 23                                           ; 4                             ;
+; 24                                           ; 7                             ;
+; 25                                           ; 3                             ;
 ; 26                                           ; 5                             ;
 ; 27                                           ; 3                             ;
-; 28                                           ; 11                            ;
-; 29                                           ; 1                             ;
-; 30                                           ; 3                             ;
-; 31                                           ; 1                             ;
-; 32                                           ; 10                            ;
+; 28                                           ; 10                            ;
+; 29                                           ; 2                             ;
+; 30                                           ; 1                             ;
+; 31                                           ; 4                             ;
+; 32                                           ; 7                             ;
 ; 33                                           ; 8                             ;
-; 34                                           ; 2                             ;
+; 34                                           ; 1                             ;
 ; 35                                           ; 2                             ;
-; 36                                           ; 2                             ;
+; 36                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -1827,80 +1822,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+-----------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                   ;
-+-----------------+---------------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s)      ; Delay Added in ns ;
-+-----------------+---------------------------+-------------------+
-; CLOCK_50,I/O    ; CLOCK_50                  ; 134.7             ;
-; CLOCK_50        ; CLOCK_50                  ; 69.2              ;
-; CLOCK_50        ; ps2_keyboard:kbd|ascii[0] ; 34.4              ;
-+-----------------+---------------------------+-------------------+
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+; I/O             ; CLOCK_50             ; 1.4               ;
++-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                ;
-+------------------------------+---------------------------+-------------------+
-; Source Register              ; Destination Register      ; Delay Added in ns ;
-+------------------------------+---------------------------+-------------------+
-; ps2_keyboard:kbd|ascii[0]    ; ascii_hex_nibble:ah|h[1]  ; 5.504             ;
-; ps2_keyboard:kbd|ascii[4]    ; blk_ascii_count[1]        ; 2.879             ;
-; ps2_keyboard:kbd|ascii[5]    ; blk_ascii_count[1]        ; 2.879             ;
-; ps2_keyboard:kbd|ascii[6]    ; blk_ascii_count[1]        ; 2.879             ;
-; ps2_keyboard:kbd|ascii[3]    ; blk_ascii_count[1]        ; 2.585             ;
-; ps2_keyboard:kbd|ascii[2]    ; blk_ascii_count[1]        ; 2.585             ;
-; ps2_keyboard:kbd|ascii[1]    ; blk_ascii_count[1]        ; 2.585             ;
-; blk_ascii_count[2]           ; blk_ascii_count[3]        ; 1.918             ;
-; blk_ascii_count[1]           ; blk_ascii_count[3]        ; 1.918             ;
-; blk_ascii_count[3]           ; blk_ascii_count[3]        ; 1.918             ;
-; blk_ascii_count[0]           ; blk_ascii_count[3]        ; 1.918             ;
-; ascii_mode                   ; blk_ascii_count[3]        ; 1.918             ;
-; sel_key                      ; blk_ascii_count[3]        ; 1.918             ;
-; blk_hex_count[4]             ; block[7]                  ; 1.781             ;
-; key_count[4]                 ; key_buf[1]                ; 1.687             ;
-; key_count[2]                 ; key_buf[1]                ; 1.687             ;
-; key_count[1]                 ; key_buf[1]                ; 1.687             ;
-; key_count[0]                 ; key_buf[1]                ; 1.687             ;
-; key_count[5]                 ; key_buf[1]                ; 1.687             ;
-; key_count[3]                 ; key_buf[1]                ; 1.687             ;
-; ps2_keyboard:kbd|ascii_valid ; key_count[5]              ; 1.552             ;
-; key_r2[0]                    ; key_count[5]              ; 1.552             ;
-; key_r1[0]                    ; key_count[5]              ; 1.552             ;
-; SW[17]                       ; key_count[5]              ; 1.552             ;
-; sw_mode                      ; key_count[5]              ; 1.552             ;
-; block[3]                     ; block[7]                  ; 1.240             ;
-; block[7]                     ; block[7]                  ; 1.240             ;
-; blk_hex_count[3]             ; block[4]                  ; 1.177             ;
-; blk_hex_count[1]             ; block[4]                  ; 1.177             ;
-; blk_hex_count[0]             ; block[4]                  ; 1.177             ;
-; blk_hex_count[2]             ; block[4]                  ; 1.177             ;
-; key_r2[1]                    ; block[4]                  ; 1.177             ;
-; key_r1[1]                    ; block[4]                  ; 1.177             ;
-; por_cnt[19]                  ; key_buf[101]              ; 0.998             ;
-; xtea_core:core|block_out[6]  ; block[6]                  ; 0.396             ;
-; block[2]                     ; block[6]                  ; 0.396             ;
-; ascii_hex_nibble:ah|h[0]     ; block[0]                  ; 0.352             ;
-; xtea_core:core|block_out[0]  ; block[0]                  ; 0.352             ;
-; SW[0]                        ; block[0]                  ; 0.352             ;
-; xtea_core:core|block_out[4]  ; block[4]                  ; 0.293             ;
-; block[0]                     ; block[4]                  ; 0.293             ;
-; xtea_core:core|done          ; block[38]                 ; 0.272             ;
-; block[1]                     ; block[5]                  ; 0.215             ;
-; xtea_core:core|block_out[5]  ; block[5]                  ; 0.215             ;
-; key_buf[2]                   ; key_buf[6]                ; 0.053             ;
-; lcd_text:lcd|state.S_ADDR1   ; lcd_text:lcd|state.S_WRL1 ; 0.038             ;
-; lcd_text:lcd|state.S_ADDR2   ; lcd_text:lcd|state.S_WRL2 ; 0.038             ;
-+------------------------------+---------------------------+-------------------+
-Note: This table only shows the top 47 path(s) that have the largest delay added for hold.
++-----------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                   ;
++-----------------+---------------------------+-------------------+
+; Source Register ; Destination Register      ; Delay Added in ns ;
++-----------------+---------------------------+-------------------+
+; CLOCK_50        ; ps2_keyboard:kbd|ascii[1] ; 0.747             ;
++-----------------+---------------------------+-------------------+
+Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (119006): Selected device EP4CE115F29C7 for design "XTEA_proj"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1925,29 +1872,32 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Critical Warning (169085): No exact pin location assignment(s) for 22 pins of 38 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'XTEA_proj.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332144): No user constrained base clocks found in the design
-Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: ah|valid~0  from: dataa  to: combout
-Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 14
+Info (332104): Reading SDC File: 'XTEA_proj.sdc'
+Warning (332060): Node: ps2_keyboard:kbd|ascii[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch ascii_hex_nibble:ah|h[3] is being clocked by ps2_keyboard:kbd|ascii[0]
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From CLOCK_50 (Rise) to CLOCK_50 (Rise) (setup and hold)
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 1 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):   20.000     CLOCK_50
+Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 14
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node ps2_keyboard:kbd|ascii[3] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-        Info (176357): Destination node ps2_keyboard:kbd|ascii[4] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-        Info (176357): Destination node ps2_keyboard:kbd|ascii[5] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-        Info (176357): Destination node ps2_keyboard:kbd|ascii[6] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-        Info (176357): Destination node ps2_keyboard:kbd|ascii[2] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-        Info (176357): Destination node ps2_keyboard:kbd|ascii[1] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-Info (176353): Automatically promoted node ascii_hex_nibble:ah|valid~1  File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 6
+        Info (176357): Destination node ps2_keyboard:kbd|ascii[3] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+        Info (176357): Destination node ps2_keyboard:kbd|ascii[0] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+        Info (176357): Destination node ps2_keyboard:kbd|ascii[4] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+        Info (176357): Destination node ps2_keyboard:kbd|ascii[5] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+        Info (176357): Destination node ps2_keyboard:kbd|ascii[6] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+        Info (176357): Destination node ps2_keyboard:kbd|ascii[2] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+        Info (176357): Destination node ps2_keyboard:kbd|ascii[1] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+Info (176353): Automatically promoted node ascii_hex_nibble:ah|valid~1  File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 6
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node block~72 File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 78
-        Info (176357): Destination node block[45]~75 File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 89
-        Info (176357): Destination node block~128 File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 78
-        Info (176357): Destination node key_buf~4 File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 78
+        Info (176357): Destination node block~69 File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 78
+        Info (176357): Destination node blk_hex_count[4]~24 File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 89
+        Info (176357): Destination node key_buf~4 File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 78
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1964,36 +1914,37 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  56 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:07
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 11% of the available device resources in the region that extends from location X46_Y37 to location X57_Y48
+    Info (170196): Router estimated peak interconnect usage is 11% of the available device resources in the region that extends from location X58_Y37 to location X68_Y48
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.94 seconds.
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.73 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/output_files/XTEA_proj.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6349 megabytes
-    Info: Processing ended: Wed Apr 29 21:58:38 2026
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:49
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (144001): Generated suppressed messages file C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/output_files/XTEA_proj.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 5870 megabytes
+    Info: Processing ended: Tue May 05 17:15:55 2026
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:31
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/output_files/XTEA_proj.fit.smsg.
+The suppressed messages can be found in C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/output_files/XTEA_proj.fit.smsg.
 
 

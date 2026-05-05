@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XTEA_proj
-Wed Apr 29 21:58:22 2026
+Tue May 05 17:15:34 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -55,13 +55,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 29 21:58:22 2026       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 05 17:15:34 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XTEA_proj                                   ;
 ; Top-level Entity Name              ; top_xtea_ps2_lcd                            ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,379                                       ;
-;     Total combinational functions  ; 2,359                                       ;
+; Total logic elements               ; 2,376                                       ;
+;     Total combinational functions  ; 2,356                                       ;
 ;     Dedicated logic registers      ; 664                                         ;
 ; Total registers                    ; 664                                         ;
 ; Total pins                         ; 38                                          ;
@@ -163,55 +163,52 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 12          ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 ;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
-;     Processor 7            ;   0.1%      ;
-;     Processor 8            ;   0.1%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
-+-------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                            ; Library ;
-+-------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; student_xtea_ps2_ascii/xtea_core.v        ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v        ;         ;
-; student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ;         ;
-; student_xtea_ps2_ascii/ps2_keyboard.v     ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v     ;         ;
-; student_xtea_ps2_ascii/lcd_text.v         ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v         ;         ;
-; student_xtea_ps2_ascii/hex64_to_ascii16.v ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v ;         ;
-; student_xtea_ps2_ascii/hex_ascii.v        ; yes             ; User Verilog HDL File        ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v        ;         ;
-; lpm_divide.tdf                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                   ;         ;
-; abs_divider.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                  ;         ;
-; sign_div_unsign.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                              ;         ;
-; aglobal201.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                   ;         ;
-; db/lpm_divide_j9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_j9m.tdf                     ;         ;
-; db/sign_div_unsign_8kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_8kh.tdf                ;         ;
-; db/alt_u_div_44f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_44f.tdf                      ;         ;
-; db/add_sub_7pc.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_7pc.tdf                        ;         ;
-; db/add_sub_8pc.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_8pc.tdf                        ;         ;
-; db/lpm_divide_k9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_k9m.tdf                     ;         ;
-; db/sign_div_unsign_9kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_9kh.tdf                ;         ;
-; db/alt_u_div_64f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_64f.tdf                      ;         ;
-; db/lpm_divide_fhm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_fhm.tdf                     ;         ;
-; db/sign_div_unsign_7kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_7kh.tdf                ;         ;
-; db/alt_u_div_24f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_24f.tdf                      ;         ;
-; db/lpm_divide_ghm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_ghm.tdf                     ;         ;
-; db/lpm_divide_hhm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_hhm.tdf                     ;         ;
-; db/lpm_divide_i9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_i9m.tdf                     ;         ;
-+-------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++-------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
++-------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; student_xtea_ps2_ascii/xtea_core.v        ; yes             ; User Verilog HDL File        ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v        ;         ;
+; student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ; yes             ; User Verilog HDL File        ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v ;         ;
+; student_xtea_ps2_ascii/ps2_keyboard.v     ; yes             ; User Verilog HDL File        ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v     ;         ;
+; student_xtea_ps2_ascii/lcd_text.v         ; yes             ; User Verilog HDL File        ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v         ;         ;
+; student_xtea_ps2_ascii/hex64_to_ascii16.v ; yes             ; User Verilog HDL File        ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v ;         ;
+; student_xtea_ps2_ascii/hex_ascii.v        ; yes             ; User Verilog HDL File        ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v        ;         ;
+; lpm_divide.tdf                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                     ;         ;
+; abs_divider.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                    ;         ;
+; sign_div_unsign.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                ;         ;
+; aglobal201.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                     ;         ;
+; db/lpm_divide_j9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_j9m.tdf                     ;         ;
+; db/sign_div_unsign_8kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_8kh.tdf                ;         ;
+; db/alt_u_div_44f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_44f.tdf                      ;         ;
+; db/add_sub_7pc.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/add_sub_7pc.tdf                        ;         ;
+; db/add_sub_8pc.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/add_sub_8pc.tdf                        ;         ;
+; db/lpm_divide_k9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_k9m.tdf                     ;         ;
+; db/sign_div_unsign_9kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_9kh.tdf                ;         ;
+; db/alt_u_div_64f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_64f.tdf                      ;         ;
+; db/lpm_divide_fhm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_fhm.tdf                     ;         ;
+; db/sign_div_unsign_7kh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_7kh.tdf                ;         ;
+; db/alt_u_div_24f.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_24f.tdf                      ;         ;
+; db/lpm_divide_ghm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_ghm.tdf                     ;         ;
+; db/lpm_divide_hhm.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_hhm.tdf                     ;         ;
+; db/lpm_divide_i9m.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_i9m.tdf                     ;         ;
++-------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -219,16 +216,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 2,379          ;
+; Estimated Total logic elements              ; 2,376          ;
 ;                                             ;                ;
-; Total combinational functions               ; 2359           ;
+; Total combinational functions               ; 2356           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 950            ;
-;     -- 3 input functions                    ; 739            ;
-;     -- <=2 input functions                  ; 670            ;
+;     -- 4 input functions                    ; 952            ;
+;     -- 3 input functions                    ; 736            ;
+;     -- <=2 input functions                  ; 668            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 1690           ;
+;     -- normal mode                          ; 1687           ;
 ;     -- arithmetic mode                      ; 669            ;
 ;                                             ;                ;
 ; Total registers                             ; 664            ;
@@ -241,7 +238,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 664            ;
-; Total fan-out                               ; 9549           ;
+; Total fan-out                               ; 9544           ;
 ; Average fan-out                             ; 3.08           ;
 +---------------------------------------------+----------------+
 
@@ -251,8 +248,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top_xtea_ps2_lcd                         ; 2359 (576)          ; 664 (412)                 ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |top_xtea_ps2_lcd                                                                                                 ; top_xtea_ps2_lcd    ; work         ;
-;    |ascii_hex_nibble:ah|                  ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|ascii_hex_nibble:ah                                                                             ; ascii_hex_nibble    ; work         ;
+; |top_xtea_ps2_lcd                         ; 2356 (574)          ; 664 (412)                 ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |top_xtea_ps2_lcd                                                                                                 ; top_xtea_ps2_lcd    ; work         ;
+;    |ascii_hex_nibble:ah|                  ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|ascii_hex_nibble:ah                                                                             ; ascii_hex_nibble    ; work         ;
 ;    |hex64_to_ascii16:fmt|                 ; 144 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt                                                                            ; hex64_to_ascii16    ; work         ;
 ;       |hex_nibble_to_ascii:nibs[0].conv|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[0].conv                                           ; hex_nibble_to_ascii ; work         ;
 ;       |hex_nibble_to_ascii:nibs[10].conv| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_xtea_ps2_lcd|hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[10].conv                                          ; hex_nibble_to_ascii ; work         ;
@@ -635,19 +632,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR SLD          ; 2                           ;
 ;     SLD               ; 8                           ;
 ;     plain             ; 137                         ;
-; cycloneiii_lcell_comb ; 2360                        ;
+; cycloneiii_lcell_comb ; 2357                        ;
 ;     arith             ; 669                         ;
 ;         2 data inputs ; 154                         ;
 ;         3 data inputs ; 515                         ;
-;     normal            ; 1691                        ;
+;     normal            ; 1688                        ;
 ;         0 data inputs ; 14                          ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 489                         ;
-;         3 data inputs ; 224                         ;
-;         4 data inputs ; 950                         ;
+;         2 data inputs ; 487                         ;
+;         3 data inputs ; 221                         ;
+;         4 data inputs ; 952                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 13.60                       ;
-; Average LUT depth     ; 7.79                        ;
+; Average LUT depth     ; 7.84                        ;
 +-----------------------+-----------------------------+
 
 
@@ -656,7 +653,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -666,151 +663,151 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 29 21:58:13 2026
+    Info: Processing started: Tue May 05 17:15:19 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XTEA_proj -c XTEA_proj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/xtea_core.v
-    Info (12023): Found entity 1: xtea_core File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v Line: 7
+    Info (12023): Found entity 1: xtea_core File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/xtea_core.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/top_xtea_ps2_lcd.v
-    Info (12023): Found entity 1: top_xtea_ps2_lcd File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 13
+    Info (12023): Found entity 1: top_xtea_ps2_lcd File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/tb_xtea_core.v
-    Info (12023): Found entity 1: tb_xtea_core File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/tb_xtea_core.v Line: 3
+    Info (12023): Found entity 1: tb_xtea_core File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/tb_xtea_core.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/ps2_keyboard.v
-    Info (12023): Found entity 1: ps2_keyboard File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 18
+    Info (12023): Found entity 1: ps2_keyboard File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/lcd_text.v
-    Info (12023): Found entity 1: lcd_text File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 15
+    Info (12023): Found entity 1: lcd_text File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file student_xtea_ps2_ascii/hex64_to_ascii16.v
-    Info (12023): Found entity 1: hex64_to_ascii16 File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v Line: 2
+    Info (12023): Found entity 1: hex64_to_ascii16 File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file student_xtea_ps2_ascii/hex_ascii.v
-    Info (12023): Found entity 1: hex_nibble_to_ascii File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 2
-    Info (12023): Found entity 2: ascii_hex_nibble File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 6
+    Info (12023): Found entity 1: hex_nibble_to_ascii File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 2
+    Info (12023): Found entity 2: ascii_hex_nibble File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 6
 Info (12127): Elaborating entity "top_xtea_ps2_lcd" for the top level hierarchy
-Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "ps2_keyboard:kbd" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 41
-Info (12128): Elaborating entity "ascii_hex_nibble" for hierarchy "ascii_hex_nibble:ah" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 45
-Warning (10230): Verilog HDL assignment warning at hex_ascii.v(9): truncated value with size 8 to match size of target (4) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 9
-Warning (10230): Verilog HDL assignment warning at hex_ascii.v(10): truncated value with size 8 to match size of target (4) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-Warning (10230): Verilog HDL assignment warning at hex_ascii.v(11): truncated value with size 8 to match size of target (4) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 11
-Warning (10240): Verilog HDL Always Construct warning at hex_ascii.v(8): inferring latch(es) for variable "h", which holds its previous value in one or more paths through the always construct File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 8
-Info (10041): Inferred latch for "h[0]" at hex_ascii.v(10) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-Info (10041): Inferred latch for "h[1]" at hex_ascii.v(10) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-Info (10041): Inferred latch for "h[2]" at hex_ascii.v(10) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-Info (10041): Inferred latch for "h[3]" at hex_ascii.v(10) File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-Info (12128): Elaborating entity "xtea_core" for hierarchy "xtea_core:core" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 186
-Info (12128): Elaborating entity "hex64_to_ascii16" for hierarchy "hex64_to_ascii16:fmt" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 202
-Info (12128): Elaborating entity "hex_nibble_to_ascii" for hierarchy "hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[0].conv" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v Line: 6
-Info (12128): Elaborating entity "lcd_text" for hierarchy "lcd_text:lcd" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 246
-Info (10264): Verilog HDL Case Statement information at lcd_text.v(123): all case item expressions in this case statement are onehot File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 123
-Info (10264): Verilog HDL Case Statement information at lcd_text.v(148): all case item expressions in this case statement are onehot File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 148
-Info (10264): Verilog HDL Case Statement information at lcd_text.v(165): all case item expressions in this case statement are onehot File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 165
+Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "ps2_keyboard:kbd" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 41
+Info (12128): Elaborating entity "ascii_hex_nibble" for hierarchy "ascii_hex_nibble:ah" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 45
+Warning (10230): Verilog HDL assignment warning at hex_ascii.v(9): truncated value with size 8 to match size of target (4) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 9
+Warning (10230): Verilog HDL assignment warning at hex_ascii.v(10): truncated value with size 8 to match size of target (4) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+Warning (10230): Verilog HDL assignment warning at hex_ascii.v(11): truncated value with size 8 to match size of target (4) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at hex_ascii.v(8): inferring latch(es) for variable "h", which holds its previous value in one or more paths through the always construct File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 8
+Info (10041): Inferred latch for "h[0]" at hex_ascii.v(10) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+Info (10041): Inferred latch for "h[1]" at hex_ascii.v(10) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+Info (10041): Inferred latch for "h[2]" at hex_ascii.v(10) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+Info (10041): Inferred latch for "h[3]" at hex_ascii.v(10) File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+Info (12128): Elaborating entity "xtea_core" for hierarchy "xtea_core:core" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 186
+Info (12128): Elaborating entity "hex64_to_ascii16" for hierarchy "hex64_to_ascii16:fmt" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 202
+Info (12128): Elaborating entity "hex_nibble_to_ascii" for hierarchy "hex64_to_ascii16:fmt|hex_nibble_to_ascii:nibs[0].conv" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex64_to_ascii16.v Line: 6
+Info (12128): Elaborating entity "lcd_text" for hierarchy "lcd_text:lcd" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 246
+Info (10264): Verilog HDL Case Statement information at lcd_text.v(123): all case item expressions in this case statement are onehot File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 123
+Info (10264): Verilog HDL Case Statement information at lcd_text.v(148): all case item expressions in this case statement are onehot File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 148
+Info (10264): Verilog HDL Case Statement information at lcd_text.v(165): all case item expressions in this case statement are onehot File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/lcd_text.v Line: 165
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
-Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
+Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j9m.tdf
-    Info (12023): Found entity 1: lpm_divide_j9m File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_j9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_j9m File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_j9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_8kh File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_8kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_8kh File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_8kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_44f.tdf
-    Info (12023): Found entity 1: alt_u_div_44f File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_44f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_44f File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_44f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k9m.tdf
-    Info (12023): Found entity 1: lpm_divide_k9m File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_k9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_k9m File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_k9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_9kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_9kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
-    Info (12023): Found entity 1: alt_u_div_64f File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_64f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
+    Info (12023): Found entity 1: alt_u_div_64f File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_64f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fhm.tdf
-    Info (12023): Found entity 1: lpm_divide_fhm File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_fhm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_fhm File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_fhm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_7kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/sign_div_unsign_7kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_24f.tdf
-    Info (12023): Found entity 1: alt_u_div_24f File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_24f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
-Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
+    Info (12023): Found entity 1: alt_u_div_24f File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/alt_u_div_24f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
+Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter: File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 239
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ghm.tdf
-    Info (12023): Found entity 1: lpm_divide_ghm File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_ghm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
+    Info (12023): Found entity 1: lpm_divide_ghm File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_ghm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 231
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
-    Info (12023): Found entity 1: lpm_divide_hhm File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_hhm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
-Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
+    Info (12023): Found entity 1: lpm_divide_hhm File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_hhm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
+Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 236
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i9m.tdf
-    Info (12023): Found entity 1: lpm_divide_i9m File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_i9m.tdf Line: 25
-Warning (13012): Latch ascii_hex_nibble:ah|h[0] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[0] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-Warning (13012): Latch ascii_hex_nibble:ah|h[3] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[3] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-Warning (13012): Latch ascii_hex_nibble:ah|h[1] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[1] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
-Warning (13012): Latch ascii_hex_nibble:ah|h[2] has unsafe behavior File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[2] File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+    Info (12023): Found entity 1: lpm_divide_i9m File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/db/lpm_divide_i9m.tdf Line: 25
+Warning (13012): Latch ascii_hex_nibble:ah|h[0] has unsafe behavior File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[0] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+Warning (13012): Latch ascii_hex_nibble:ah|h[3] has unsafe behavior File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[3] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+Warning (13012): Latch ascii_hex_nibble:ah|h[1] has unsafe behavior File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[1] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
+Warning (13012): Latch ascii_hex_nibble:ah|h[2] has unsafe behavior File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/hex_ascii.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2_keyboard:kbd|ascii[2] File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/ps2_keyboard.v Line: 81
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LCD_ON" is stuck at VCC File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 21
-    Warning (13410): Pin "LCD_RW" is stuck at GND File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 24
+    Warning (13410): Pin "LCD_ON" is stuck at VCC File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 21
+    Warning (13410): Pin "LCD_RW" is stuck at GND File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 15
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/boysa.CALEB-DESKTOP/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
-Info (21057): Implemented 2422 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 15
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/boysa/Desktop/XTEA-Implementation-FPGA/student_xtea_ps2_ascii/top_xtea_ps2_lcd.v Line: 18
+Info (21057): Implemented 2419 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 26 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 2384 logic cells
+    Info (21061): Implemented 2381 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4894 megabytes
-    Info: Processing ended: Wed Apr 29 21:58:22 2026
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Tue May 05 17:15:34 2026
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:24
 
 
